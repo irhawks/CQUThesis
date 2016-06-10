@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>CQUThesis by nanmu42</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">CQUThesis</h1>
+      <h2 class="project-tagline">重庆大学毕业论文LaTeX模板---LaTeX Thesis Template for Chongqing University Version 0.9.7</h2>
+      <a href="https://github.com/nanmu42/CQUThesis" class="btn">View on GitHub</a>
+      <a href="https://github.com/nanmu42/CQUThesis/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nanmu42/CQUThesis/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="嗨这里是cquthesis" class="anchor" href="#%E5%97%A8%E8%BF%99%E9%87%8C%E6%98%AFcquthesis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>嗨，这里是CQUThesis！</h1>
+
+<p>CQUThesis表示的是<strong>C</strong>hong<strong>Q</strong>ing <strong>U</strong>niversity <strong>Thesis</strong>.</p>
+
+<p>本宏包是重庆大学毕业论文的<code>\LaTeX{}</code>模板，支持学士、硕士、博士论文的排版。合理使用本宏包可以大大减轻重庆大学毕业生在毕业论文撰写过程中的排版工作量。</p>
+
+<p>CQUThesis根据重庆大学《重庆大学本科设计（论文）撰写规范化要求（2007年修订版）》和《重庆大学博士、硕士论文撰写格式标准（2007年修订版）》编写，力求合规，简洁，易于实现，用户友好。</p>
+
+<h1>
+<a id="模板特色" class="anchor" href="#%E6%A8%A1%E6%9D%BF%E7%89%B9%E8%89%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>模板特色</h1>
+
+<ul>
+<li>支持重庆大学本科（文学、理工）、硕士（学术、专业）、博士的毕业论文格式；</li>
+<li>内置封面、目录、索引、授权书等论文部件，可按需自动生成；</li>
+<li>自动侦测文档页数，生成相应的单面打印/双面打印PDF文件；</li>
+<li>预置一批按毕业论文环境优化过的宏包和小功能，包含国际标准单位、化学式支持、三线表等，可按需开启。</li>
+</ul>
+
+<p><img src="https://cloud.githubusercontent.com/assets/8143068/15363773/68c6b380-1d4c-11e6-9627-4d892facb333.png" alt="CQUThesis-Poster"></p>
+
+<h1>
+<a id="获取cquthesis" class="anchor" href="#%E8%8E%B7%E5%8F%96cquthesis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>获取CQUThesis</h1>
+
+<h2>
+<a id="下载" class="anchor" href="#%E4%B8%8B%E8%BD%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>下载</h2>
+
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>下载地址</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发版</td>
+<td><a href="https://github.com/nanmu42/cquthesis/zipball/master">点我下载</a></td>
+<td>最新的功能，最快的BugFix</td>
+</tr>
+<tr>
+<td>发行版</td>
+<td><a href="https://www.ctan.org/pkg/cquthesis">CTAN下载页面</a></td>
+<td>定期更新，和TeX Live等发行版一同发行</td>
+</tr>
+</tbody>
+</table>
+
+<p>排版示例和用户文档随版本发布，如果需要单独下载，请参阅后文。</p>
+
+<h2>
+<a id="部署" class="anchor" href="#%E9%83%A8%E7%BD%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>部署</h2>
+
+<p>为了降低新手使用模板的难度，默认情况下，模板文件<code>cquthesis.cls</code>, <code>cquthesis.cfg</code>已经先行从<code>cquthesis.dtx</code>中提取出来，您无需再执行任何操作。但如果您确实需要（如更新或自己编译用户文档）或者对<code>cquthesis.dtx</code>文件感兴趣，您可参阅和本文件同目录的<code>README-English.md</code>，内有详情。</p>
+
+<p>请编译<code>main.tex</code>获得排版示例，如果您对LaTeX比较熟悉，请直接参照排版示例进行部署。其中<code>图1.1</code>为CQUThesis文件结构。下面是一些相对详细的提示。</p>
+
+<p>请创建一个新的文件夹作为根目录。</p>
+
+<p>必要文件列举如下：</p>
+
+<ul>
+<li>模板文件：<code>cquthesis.cls</code>, <code>cquthesis.cfg</code>, <code>cquthesis.sty</code>以及<code>cqunumberical.bst</code>，位于根目录；</li>
+<li>内容文件夹：<code>contents</code>, <code>figures</code>, <code>ref</code>（推荐），都位于根目录；</li>
+<li>
+<code>contents</code>内的必要文件：<code>ack.tex</code>, <code>appendix.tex</code>, <code>cover.tex</code>, <code>denotation.tex</code>，将这些文件按文件结构安排至根目录中；</li>
+<li>最后请将<code>main.tex</code>置于根目录，工作即可开始。</li>
+</ul>
+
+<h2>
+<a id="更新" class="anchor" href="#%E6%9B%B4%E6%96%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>更新</h2>
+
+<p>需要更新时，请从Github下载zip文档后解压，覆盖掉原始的模板文件，使用命令行定位到文件夹，运行：
+<code>latex cquthesis.ins</code>
+即可完成更新。</p>
+
+<h1>
+<a id="文档" class="anchor" href="#%E6%96%87%E6%A1%A3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>文档</h1>
+
+<table>
+<thead>
+<tr>
+<th>文档</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>排版示例</td>
+<td>请编译<code>main.tex</code>获得</td>
+</tr>
+<tr>
+<td>用户文档</td>
+<td>随模板发布，也可<a href="https://github.com/nanmu42/CQUThesis/files/308798/cquthesis.pdf">点我下载</a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h1>
+<a id="提问和支持" class="anchor" href="#%E6%8F%90%E9%97%AE%E5%92%8C%E6%94%AF%E6%8C%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>提问和支持</h1>
+
+<ul>
+<li><a href="https://github.com/nanmu42/CQUThesis/issues">Github Issues</a></li>
+<li>造访重庆大学7117工作室寻求支持</li>
+</ul>
+
+<h1>
+<a id="用户协议" class="anchor" href="#%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>用户协议</h1>
+
+<ol>
+<li>本模板按照<a href="https://latex-project.org/lppl/lppl-1-3.txt">LaTeX Project Public License</a>发布，协议版本号为1.3或以后的任何版本（随你意）；</li>
+<li>重庆大学教务处和研究生院只提供毕业论文写作指南，不提供官方模板，也不会授权或认证第三方模板为官方模板。
+这个模板是按照写作指南的参考实现，模板作者自当尽力，但不保证审查老师不提意见。任何由于本模板而引起的论文格式审查问题与本模板作者无关。</li>
+</ol>
+
+<h1>
+<a id="about-cquthesis" class="anchor" href="#about-cquthesis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About CQUThesis</h1>
+
+<p>CQUThesis stands for Chongqing University Thesis Template for LaTeX, bearing the ability to support bachelor, master, doctor dissertations.</p>
+
+<h1>
+<a id="致谢--acknowledgements" class="anchor" href="#%E8%87%B4%E8%B0%A2--acknowledgements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>致谢 / Acknowledgements</h1>
+
+<p>这个模板是站在巨人肩膀上的成果，感谢LaTeX 2e计划，感谢<a href="https://github.com/CTeX-org/ctex-kit">CTeX社区</a>提供的中文解决方案，感谢薛瑞尼副教授的<a href="https://github.com/xueruini/thuthesis">先驱之作</a>，感谢<a href="https://github.com/ustctug/gbt-7714-20155">中国科学技术大学TeX用户组</a>。向你们致以真诚的问候和感激！</p>
+
+<p>世界因你们更美好。</p>
+
+<p>The author would like to acknowledge these contributors for their efforts and, essentially, beautiful mind:</p>
+
+<ul>
+<li><a href="https://github.com/CTeX-org/ctex-kit">The CTeX Community</a></li>
+<li><a href="https://github.com/xueruini/thuthesis">XUE, Ruini</a></li>
+<li><a href="https://github.com/ustctug/gbt-7714-20155">USTC TeX User Group</a></li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nanmu42/CQUThesis">CQUThesis</a> is maintained by <a href="https://github.com/nanmu42">nanmu42</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
