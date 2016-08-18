@@ -12,7 +12,7 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">重庆大学毕业论文LaTeX模板</h1>
-      <h2 class="project-tagline">CQUThesis---LaTeX Thesis Template for Chongqing University Version 1.12</h2>
+      <h2 class="project-tagline">CQUThesis---LaTeX Thesis Template for Chongqing University Version 1.14</h2>
       <a href="https://github.com/nanmu42/CQUThesis" class="btn">View on GitHub</a>
       <a href="https://github.com/nanmu42/CQUThesis/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/nanmu42/CQUThesis/tarball/master" class="btn">Download .tar.gz</a>
@@ -86,13 +86,7 @@
 <p>CQUThesis的安装十分便利。下载CQUThesis的.zip压缩包后请将整个文件夹解压出来，进入文件夹后：</p>
 
 <ul>
-<li>Windows用户请在文件夹空白处按住Shift键再点击书鼠标右键，选择“在此处打开命令窗口”，运行下列命令：</li>
-</ul>
-
-<pre><code>makewin build
-</code></pre>
-
-<ul>
+<li>Windows用户可以直接双击运行makewin.bat</li>
 <li>Linux 和 Mac 用户请在Bash窗口中进行如下操作：</li>
 </ul>
 
@@ -100,7 +94,25 @@
 make thesis
 </code></pre>
 
-<p>即可完成 CQUThesis 的安装和示例文档的编译。</p>
+<p>即可完成 CQUThesis 的安装和示例文档的编译。以上也是CQUThesis推荐的论文编译方式。</p>
+
+<h2>
+<a id="编译方式" class="anchor" href="#%E7%BC%96%E8%AF%91%E6%96%B9%E5%BC%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>编译方式</h2>
+
+<p>CQUThesis提供了支持全平台的Makefile来完成论文编译，大部分编译工作基于<code>latexmk</code>，能够有效利用中间文件提高编译效率，实现一键编译。</p>
+
+<ul>
+<li>Windows用户请在文件夹空白处按住Shift键再点击书鼠标右键，选择“在此处打开命令窗口”，运行下列命令：</li>
+</ul>
+
+<pre><code>makewin help
+</code></pre>
+
+<p>可查询makewin.bat的详细用法（推荐熟悉，事半功倍）。</p>
+
+<ul>
+<li>Linux用户和Mac用户可打开 Makefile 文件查看相关用法。</li>
+</ul>
 
 <h2>
 <a id="更新" class="anchor" href="#%E6%9B%B4%E6%96%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>更新</h2>
