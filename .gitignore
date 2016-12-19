@@ -29,14 +29,14 @@ DEV
 *.htm
 *.html
 .Rproj.user
-cquthesis.Rproj
+hainuthesis.Rproj
 .Rhistory
 *.gz(busy)
 *.gz
 *.equ
 dtx-style.sty
-cquthesis.cls
-cquthesis.cfg
+hainuthesis.cls
+hainuthesis.cfg
 main.pdf
 
 *.swp

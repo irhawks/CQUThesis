@@ -3,7 +3,7 @@
 %%% 使用前请先阅读使用文档和用户协议，内有详细介绍。Happy Texing! :)
 %% =======================================================
 \documentclass%
-	[type=master, bilinguallist=apart,]{cquthesis}%
+	[type=master, bilinguallist=apart,]{PRCthesis}%
 % 可用选项：
 % type=[bachelor|master|doctor],      % 必选，毕业论文类型，以下项目不填时为默认
 % liberalformat,                      % 可选，仅适用本科生，使用文学类论文标题格式，默认未打开
@@ -15,9 +15,9 @@
 % continuoustoc,                      % 可选，目录和索引不会自动新开一页，适用于索引内容较少时
 % draft,                              % 写作期间可选，不渲染图片，关闭外围功能，加快预览速度，默认未开启
 
-% 请在cquthesis.sty文件中定义其他会用到的宏包和自己的变量
+% 请在PRCthesis.sty文件中定义其他会用到的宏包和自己的变量
 % 这样可以防止main.tex太过臃肿。
-\usepackage{cquthesis}
+\usepackage{PRCthesis}
 
 % 定义所有的图片文件在 figures 子目录下
 \graphicspath{{figures/}}
@@ -66,9 +66,9 @@
 %% 致谢
 \include{contents/ack}
 %% 参考文献
-% 顺序编码制：cqunumerical		
+% 顺序编码制：PRCnumerical		
 % 注意：至少需要引用一篇参考文献，否则下面两行会引起编译错误。
-\bibliographystyle{cqunumerical}
+\bibliographystyle{PRCnumerical}
 \bibliography{ref/refs}
 
 
@@ -78,7 +78,7 @@
 % 个人简历
 \include{contents/appendix}
 %% 原创声明和授权说明书，可选：用扫描页替换
-%\cquauthpage[contents/authscan.pdf]
-\cquauthpage
+%\PRCauthpage[contents/authscan.pdf]
+\PRCauthpage
 
 \end{document}

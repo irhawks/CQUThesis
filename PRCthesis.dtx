@@ -1,5 +1,6 @@
 % \iffalse meta-comment
 %
+% Copyright (C) 2016 by irhawks <irhawks@163.com>
 % Copyright (C) 2016 by Zhennan Li <i@nanmu.me>
 %
 % This file may be distributed and/or modified under the
@@ -16,7 +17,7 @@
 %
 % \iffalse
 %<*driver>
-\ProvidesFile{cquthesis.dtx}[2016/12/07 v1.16 Chongqing University Thesis Template]
+\ProvidesFile{PRCthesis.dtx}[2016/12/19 v1.16 Hainan University Thesis Template]
 \documentclass{ltxdoc}
 \usepackage{dtx-style}
 
@@ -71,27 +72,14 @@
 %
 % \GetFileInfo{\jobname.dtx}
 %
-% \changes{v0.0.1}{2016/04/03}{模板开始编写。}
-% \changes{v0.6.9}{2016/05/09}{主体功能完工，迁移模板到生产环境中继续开发。}
-% \changes{v0.7.5}{2016/05/10}{生产环境建立，模板完成测试。}
-% \changes{v0.8.1}{2016/05/12}{重绘了论文封面，增加了专业硕士选项。}
-% \changes{v0.8.5}{2016/05/13}{完成了示例文件。}
-% \changes{v0.8.7}{2016/05/14}{上线前最后一批修正。}
-% \changes{v0.8.9}{2016/05/15}{模板登陆Github，开始参与2016年重庆大学毕业设计工作。}
-% \changes{v0.9.4}{2016/05/19}{用户文档撰写完成，CQUThesis提交至CTAN审核。}
-% \changes{v0.9.7}{2016/06/09}{参与了2016年重庆大学毕业设计工作后，模板根据实际测试情况作了一番改进，Beta测试落下帷幕。}
-% \changes{v0.9.7}{2016/06/09}{拆分了\file{cquthesis.sty}宏包，将其大部分内容并入\file{cquthesis.cls}和\file{cquthesis.cfg}。}
-% \changes{v1.00}{2016/06/17}{最后一些小修补，今年的毕设工作完全结束了。目前本科方面的格式审查没有问题，研究生和博士生哪边还没有数据。}
-% \changes{v1.00}{2016/06/17}{版本号格式从vX.Y.Z改为vX.YZ，更简洁一些。}
-% \changes{v1.10}{2016/06/21}{增加了CQUThesis的开发工具Makefile和makewin.bat，现在它对\LaTeX 中高阶用户和开发者更加友好，文档也相应更新了。}
-% \changes{v1.14}{2016/08/18}{改进了makewin.bat，默认的thesis选项加入了自动判定，如果dtx没有解包，程序会自动解包。这也就是说，新手可以在几乎所有情况下放心地通过双击makewin.bat来完成编译了。}
+% \changes{v0.0.1}{2016/12/19}{模板fork自GitHub/nanmu42/CQUThesis，开始适配海南大学。}
 %
 % \def\indexname{代码索引}
 % \def\glossaryname{更新记录}
 % \IndexPrologue{\section{\indexname}}
 % \GlossaryPrologue{\section{\glossaryname}}
 %
-% \title{\bfseries\color{blue!50!black}\cquthesis：重庆大学毕业论文\LaTeX 模板}
+% \title{\bfseries\color{blue!50!black}\PRCthesis：重庆大学毕业论文\LaTeX 模板}
 % \author{{\fangsong 李振楠}\\[5pt]\texttt{i@nanmu.me}}
 % \date{\fileversion\ (\filedate)}
 % \maketitle\thispagestyle{empty}
@@ -101,14 +89,14 @@
 % \end{center}
 %	\vspace{\stretch{2}}
 % \begin{abstract}\noindent
-% \cquthesis\footnote{\url{https://github.com/nanmu42/CQUThesis}}是重庆大学毕业论文的\LaTeX{}模板，支持学士（文学、理工）、硕士（学术、专业）、博士论文的排版。
+% \PRCthesis\footnote{\url{https://github.com/irhawks/PRCThesis}}是海南大学研究生毕业论文的\LaTeX{}模板，支持硕士与博士论文的排版。
 % \end{abstract}
 % \vspace{\stretch{1}}
 % \def\abstractname{用户协议}
 % \begin{abstract}\noindent
 % \begin{enumerate}
 % \item 本模板按照LaTeX Project Public License发布，协议版本号为1.3或以后的任何版本（随你意）；
-% \item 截止本文档编译时，重庆大学教务处和研究生院只提供了\href{https://github.com/nanmu42/CQUThesis/tree/master/toolkit}{毕业论文写作指南}，没有提供官方模板，也没有授权或认证任何第三方模板为官方模板\footnote{\href{http://jq.qq.com/?_wv=1027&k=2HvYu95}{重庆大学\TeX 用户组}正在推动学校\href{https://github.com/CQUtug/TeXProposal}{认证\cquthesis} 。}。本模板是按照写作指南的参考实现，模板作者自当尽力，但不保证审查老师不提意见。在开始使用前，您同意，任何由于本模板而引起的论文格式审查问题与本模板作者无关。
+% \item 截止本文档编译时，重庆大学教务处和研究生院只提供了\href{https://github.com/nanmu42/CQUThesis/tree/master/toolkit}{毕业论文写作指南}，没有提供官方模板，也没有授权或认证任何第三方模板为官方模板\footnote{\href{http://jq.qq.com/?_wv=1027&k=2HvYu95}{重庆大学\TeX 用户组}正在推动学校\href{https://github.com/CQUtug/TeXProposal}{认证\PRCthesis} 。}。本模板是按照写作指南的参考实现，模板作者自当尽力，但不保证审查老师不提意见。在开始使用前，您同意，任何由于本模板而引起的论文格式审查问题与本模板作者无关。
 % \end{enumerate}
 % \vskip2cm
 % \end{abstract}
@@ -124,9 +112,9 @@
 % \clearpage
 %
 % \section{欢迎！}
-%\cquthesis{}是重庆大学毕业论文的\LaTeX{}模板，支持学士、硕士、博士论文的排版。合理使用本模板可以大大减轻重庆大学毕业生在毕业论文撰写过程中的排版工作量。
+%\PRCthesis{}是重庆大学毕业论文的\LaTeX{}模板，支持学士、硕士、博士论文的排版。合理使用本模板可以大大减轻重庆大学毕业生在毕业论文撰写过程中的排版工作量。
 %
-%\cquthesis{}根据重庆大学《重庆大学本科设计（论文）撰写规范化要求（2007年修订版）》和《重庆大学博士、硕士论文撰写格式标准（2007年修订版）》编写，力求合规，简洁，易于实现，用户友好。
+%\PRCthesis{}根据重庆大学《重庆大学本科设计（论文）撰写规范化要求（2007年修订版）》和《重庆大学博士、硕士论文撰写格式标准（2007年修订版）》编写，力求合规，简洁，易于实现，用户友好。
 %
 % 本模板的特色：
 %\begin{itemize}
@@ -139,7 +127,7 @@
 % 
 % 本文档将尽量完整的介绍模板的使用方法，如有不清楚之处可以参考示例文档或者根据第~\ref{sec:howtoask}节说明提问，有兴趣者都可以参与完善此手册，也非常欢迎对代码的贡献。
 %
-% \note{模板的作用在于减少论文写作过程中格式调整的时间，前提是遵守模板的用法，否则即便用了\cquthesis 也难以保证输出的论文符合学校规范。}
+% \note{模板的作用在于减少论文写作过程中格式调整的时间，前提是遵守模板的用法，否则即便用了\PRCthesis 也难以保证输出的论文符合学校规范。}
 %
 % \section{安装}
 % \label{sec:installation}
@@ -156,20 +144,20 @@
 %
 % \note{在条件允许的情况下，强烈推荐您使用\XeTeX 引擎进行编译工作。}
 %
-% \subsection{获取\cquthesis}
-% 您可通过三个主要途径获取\cquthesis ：
+% \subsection{获取\PRCthesis}
+% 您可通过三个主要途径获取\PRCthesis ：
 % 
 % \begin{itemize}
-%	\item 造访\cquthesis 的 \href{https://github.com/nanmu42/CQUThesis}{Github主页}下载最新的开发版本，这是更新最快，功能最全的版本（含工具箱Toolkit）；
-% \item 访问本模板\href{https://www.ctan.org/pkg/cquthesis}{CTAN官方镜像}下载发行版，这个版本定期从预发行版本同步（不含工具箱Toolkit\footnote{这是出于许可证方面的考虑。}）；
+%	\item 造访\PRCthesis 的 \href{https://github.com/nanmu42/CQUThesis}{Github主页}下载最新的开发版本，这是更新最快，功能最全的版本（含工具箱Toolkit）；
+% \item 访问本模板\href{https://www.ctan.org/pkg/PRCthesis}{CTAN官方镜像}下载发行版，这个版本定期从预发行版本同步（不含工具箱Toolkit\footnote{这是出于许可证方面的考虑。}）；
 % \item 使用Mik \TeX 或\TeX Live的宏包管理功能直接获得本模板，这个方式不含模板示例文件。
 % \end{itemize}
 %
-% 除此之外，\cquthesis{}不拥有也不维护任何其他镜像。
+% 除此之外，\PRCthesis{}不拥有也不维护任何其他镜像。
 %
 %
 % \subsection{模板的组成部分}
-% 下表列出了 \cquthesis{} 的主要文件及其功能介绍：
+% 下表列出了 \PRCthesis{} 的主要文件及其功能介绍：
 %
 % \begin{longtable}{l|p{8cm}}
 % \toprule
@@ -180,46 +168,46 @@
 % \endhead
 % \endfoot
 % \endlastfoot
-% cquthesis.ins & \textsc{DocStrip} 驱动文件（用于安装或更新） \\
-% cquthesis.dtx & \textsc{DocStrip} 源文件（用于安装或更新）\\
+% PRCthesis.ins & \textsc{DocStrip} 驱动文件（用于安装或更新） \\
+% PRCthesis.dtx & \textsc{DocStrip} 源文件（用于安装或更新）\\
 % makefile & GNU make配置文件（Mac和Linux）\\
 % makewin.bat & Windows版make \\\midrule
-% cquthesis.cls & \LaTeX 模板文件\\
-% cquthesis.cfg & 模板配置文件\\
-% cqunumerical.bst & 参考文献样式文件\\
-% cquthesis.cwl & 代码着色和自动补全配置文件\\\midrule
+% PRCthesis.cls & \LaTeX 模板文件\\
+% PRCthesis.cfg & 模板配置文件\\
+% PRCnumerical.bst & 参考文献样式文件\\
+% PRCthesis.cwl & 代码着色和自动补全配置文件\\\midrule
 % main.tex & 示例文档主文件\\
 % contents/ & 示例文档章节具体内容\\
 % figures/ & 示例文档图片路径\\
 % ref/ & 示例文档参考文献目录\\
 % toolkit/ & 额外的写作工具箱\\
-% cquthesis.sty & 为示例文档加载其它宏包\\\midrule
+% PRCthesis.sty & 为示例文档加载其它宏包\\\midrule
 % README-English & 英文安装提示，推荐中高阶用户阅读\\
 % README.md & Readme\\
-% \textbf{cquthesis.pdf} & 用户手册（本文档）\\\bottomrule
+% \textbf{PRCthesis.pdf} & 用户手册（本文档）\\\bottomrule
 % \end{longtable}
 %
-%  \note{\file{cquthesis.cls}和\file{cquthesis.cfg}以及\file{cqunumerical.bst}可以由\file{cquthesis.ins}和\file{cquthesis.dtx}生成，从\cquthesis { }v1.10之后，\file{cquthesis.cls}和\file{cquthesis.cfg}不再做预先提取，这个工作交给用户，整个过程很简单，请见\ref{sec:install}节。}
+%  \note{\file{PRCthesis.cls}和\file{PRCthesis.cfg}以及\file{PRCnumerical.bst}可以由\file{PRCthesis.ins}和\file{PRCthesis.dtx}生成，从\PRCthesis { }v1.10之后，\file{PRCthesis.cls}和\file{PRCthesis.cfg}不再做预先提取，这个工作交给用户，整个过程很简单，请见\ref{sec:install}节。}
 % 
 % \subsection{安装}
 % \label{sec:install}
-% 得益于GNU make和makewin.bat，\cquthesis 的安装十分便利。
-% 下载\cquthesis{}的\file*{.zip}压缩包后请将整个文件夹解压出来，进入文件夹后：
+% 得益于GNU make和makewin.bat，\PRCthesis 的安装十分便利。
+% 下载\PRCthesis{}的\file*{.zip}压缩包后请将整个文件夹解压出来，进入文件夹后：
 % \begin{itemize}
 % \item Windows用户可以直接双击运行\file{makewin.bat}；
 %
 %	\item	Linux和Mac用户请在Bash窗口中进行如下操作：
 %
 % \begin{shell}	
-% cd cquthesis
+% cd PRCthesis
 % make thesis
 %	\end{shell}
 %\end{itemize}
 %
-% 即可完成\cquthesis 的安装和示例文档的编译。
+% 即可完成\PRCthesis 的安装和示例文档的编译。
 %
 % \subsection{升级}
-% \cquthesis 的升级很方便，下载最新的开发版，将zip文件中的\file{cquthesis.dtx} 和\file{cquthesis.ins} 覆盖掉工作文件夹中的相应文件后：
+% \PRCthesis 的升级很方便，下载最新的开发版，将zip文件中的\file{PRCthesis.dtx} 和\file{PRCthesis.ins} 覆盖掉工作文件夹中的相应文件后：
 % \begin{itemize}
 %	\item Windows用户请在文件夹空白处{\heiti 按住Shift键再点击书鼠标右键}，选择“在此处打开命令窗口”，运行下列命令：
 %
@@ -230,12 +218,12 @@
 %	\item	Linux和Mac用户请在Bash窗口中进行如下操作：
 %
 % \begin{shell}	
-% cd cquthesis
+% cd PRCthesis
 % make cls
 %	\end{shell}
 %\end{itemize}
 %
-% 即可完成\cquthesis 的升级。
+% 即可完成\PRCthesis 的升级。
 %
 % \subsection{编译用户手册}
 % 如果您需要编译用户手册，请定位到解压后的文件夹：
@@ -249,7 +237,7 @@
 %	\item	Linux和Mac用户请在Bash窗口中进行如下操作：
 %
 % \begin{shell}	
-% cd cquthesis
+% cd PRCthesis
 % make doc
 %	\end{shell}
 %\end{itemize}
@@ -263,9 +251,9 @@
 %
 %
 % \subsection{代码自动补全}
-% \cquthesis 为支持代码自动补全的\LaTeX 编辑器提供了代码补全配置文件\file{cquthesis.cwl}。如果您的编辑器有代码补全功能（如\TeX Studio），那么您可以将\file{cquthesis.cwl}放置在编辑器可以识别的位置，即可享受代码着色和代码自动补全带来的便利。
+% \PRCthesis 为支持代码自动补全的\LaTeX 编辑器提供了代码补全配置文件\file{PRCthesis.cwl}。如果您的编辑器有代码补全功能（如\TeX Studio），那么您可以将\file{PRCthesis.cwl}放置在编辑器可以识别的位置，即可享受代码着色和代码自动补全带来的便利。
 %
-% 支持代码补全功能的编辑器有很多种，这里无法一一枚举，关于\file{cquthesis.cwl}的放置位置，请使用搜索引擎查找答案。推荐的关键词：“您的编辑器名称”+ cwl + location。
+% 支持代码补全功能的编辑器有很多种，这里无法一一枚举，关于\file{PRCthesis.cwl}的放置位置，请使用搜索引擎查找答案。推荐的关键词：“您的编辑器名称”+ cwl + location。
 %
 % 对于Windows平台的\TeX Studio用户，您可使用【Win+R】快捷键打开“运行”，在其中输入：
 %
@@ -273,16 +261,16 @@
 % %APPDATA%\texstudio\completion\user
 % \end{shell}
 %
-% 然后在打开的文件夹中放入\file{cquthesis.cwl}，重启\TeX Studio即可。Linux和Mac的\TeX Studio用户可参照这个思路进行操作。
+% 然后在打开的文件夹中放入\file{PRCthesis.cwl}，重启\TeX Studio即可。Linux和Mac的\TeX Studio用户可参照这个思路进行操作。
 %
 % \subsection{示例文件}
-% \cquthesis 是一个功能高度专门化的文档类，没有示例文档的用户会发现很难下手。推荐新用户从模板自带的示例文档入手，里面包括了论文写作用到的所有命令及其使用方法，只需要用自己的内容进行相应替换就可以。对于不清楚的命令可以查阅本手册。下面的例子描述了模板中章节的组织形式，来自于示例文档，具体内容可以参考模板附带的 \file{main.tex} 和 \file{contents/}。
+% \PRCthesis 是一个功能高度专门化的文档类，没有示例文档的用户会发现很难下手。推荐新用户从模板自带的示例文档入手，里面包括了论文写作用到的所有命令及其使用方法，只需要用自己的内容进行相应替换就可以。对于不清楚的命令可以查阅本手册。下面的例子描述了模板中章节的组织形式，来自于示例文档，具体内容可以参考模板附带的 \file{main.tex} 和 \file{contents/}。
 %
 % 您可以在您熟悉的IDE（写作环境）中对\file{main.tex}进行编译，推荐使用\XeTeX 进行编译，一般来说，\LaTeX 的编译原则就是多次运行编译命令，直到不再出现警告。这里提供命令行编译方法供您参考：
 %
 % \begin{shell}
 % # 示意：定位到文件夹
-% cd cquthesis
+% cd PRCthesis
 % # 1.发现文件中的引用关系，文件后缀\textsf{.tex}可省略
 % xelatex main
 % # 2.编译参考文件源文件，生成\textsf{.bbl}文件
@@ -306,10 +294,10 @@
 % 选择论文类型，必须项，当前支持：\option{bachelor}，\option{master}，\option{doctor}。如：
 % \begin{latex}
 % % 博士论文
-% \documentclass[type=doctor,]{cquthesis}
+% \documentclass[type=doctor,]{PRCthesis}
 %
 % % 硕士论文
-% \documentclass[type=master,]{cquthesis}
+% \documentclass[type=master,]{PRCthesis}
 % \end{latex}
 % 
 % \DescribeOption{liberalformat}
@@ -321,12 +309,12 @@
 % 研究生可选，值为\textsf{true}时按专业硕士要求排版（影响封面），值为\textsf{false}时按学术硕士要求排版，默认值为\textsf{false}，例如：
 % \begin{latex}
 % % 学术硕士论文
-% \documentclass[type=master,proffesionalmaster=false,]{cquthesis}
+% \documentclass[type=master,proffesionalmaster=false,]{PRCthesis}
 % % 上面相当于：
-% \documentclass[type=master,]{cquthesis}
+% \documentclass[type=master,]{PRCthesis}
 %
 % % 专业硕士论文
-% \documentclass[type=master,proffesionalmaster=true,]{cquthesis}
+% \documentclass[type=master,proffesionalmaster=true,]{PRCthesis}
 % \end{latex}
 % \DescribeOption{printmode=}
 % 可选项，确定单双页打印模式，有三个值可用，默认采用自动判定（auto）：
@@ -337,7 +325,7 @@
 %	\end{description}
 %
 % \DescribeOption{bilinguallist=}
-% 从版本v1.12开始，\cquthesis 开始支持图、表、公式的中英双语题注。除此之外，就像您期待的那样，表录、图录、公式目录页有了自己的英文版本，它们全部按双语题注的内容自动生成。这是一个可选项，有三个值可用：
+% 从版本v1.12开始，\PRCthesis 开始支持图、表、公式的中英双语题注。除此之外，就像您期待的那样，表录、图录、公式目录页有了自己的英文版本，它们全部按双语题注的内容自动生成。这是一个可选项，有三个值可用：
 %	\begin{description}
 %		\item[\option{off}] 缺省默认，模板不会生成表录、图录、公式目录的英文版本；
 %		\item[\option{combined}] 模板会生成表录、图录、公式目录的英文版本，它们会在中文版本中逐条嵌入；
@@ -412,7 +400,7 @@
 % {\kaishu 君不见走马川行雪海边，平沙莽莽黄入天。}
 %
 % \DescribeMacro{\zihao}
-% \cquthesis 使用\CTeX 的原生字体命令，使用中文字号：
+% \PRCthesis 使用\CTeX 的原生字体命令，使用中文字号：
 % \begin{latex}
 % \zihao{-4}	% 后文使用小四号
 % {\zihao{2} 使用二号字的段落}	% 大括号外又回到小四号
@@ -421,23 +409,23 @@
 % \subsection{封面信息和摘要}
 % \label{sec:titlepage}
 % \subsubsection{设置方法}
-% 封面信息提供两种配置方法：一是通过统一设置命令\cs{cqusetup} 通过\emph{key=value}形式完成；二是每个信息利用命令独立设置，其中命令的名字跟 \emph{key} 相同。两种方式可以交叉使用，并按顺序执行（即对同一项，后来的设置会覆盖前面的）。以 \texttt{c} 开头的命令跟中文相关，\texttt{e} 开头则为对应的英文。
+% 封面信息提供两种配置方法：一是通过统一设置命令\cs{PRCsetup} 通过\emph{key=value}形式完成；二是每个信息利用命令独立设置，其中命令的名字跟 \emph{key} 相同。两种方式可以交叉使用，并按顺序执行（即对同一项，后来的设置会覆盖前面的）。以 \texttt{c} 开头的命令跟中文相关，\texttt{e} 开头则为对应的英文。
 %
-% \DescribeMacro{\cqusetup}
-% \cs{cqusetup} 用法与常见 \emph{key=value}命令相同，如下：
+% \DescribeMacro{\PRCsetup}
+% \cs{PRCsetup} 用法与常见 \emph{key=value}命令相同，如下：
 % \begin{latex}
-% \cqusetup{
+% \PRCsetup{
 %   key1 = value1,
 %   key2 = {a value, with comma},
 % }
 % % 可以多次调用
-% \cqusetup{
+% \PRCsetup{
 %   key3 = value3,
 %   key1 = anothervalue, % 覆盖 value1
 % }
 % \end{latex}
 %
-% \note{\cs{cqusetup} 使用 \pkg{kvoptions} 机制，所以配置项之间不能有空行，否则会报错。}
+% \note{\cs{PRCsetup} 使用 \pkg{kvoptions} 机制，所以配置项之间不能有空行，否则会报错。}
 %
 % 大多数命令的使用方法都是： \cs{command}\marg{arg}，例外者将具体指出。这些命令都在示例文档的 \file{contents/cover.tex} 中。
 %
@@ -449,13 +437,13 @@
 % \ctitle{论文标题//这是标题的第二行//第三行//最好别有第四行} 
 % \etitle{Title in English// the 2nd line}
 % % 以上命令和以下命令等价：
-% \cqusetup{
+% \PRCsetup{
 % 	ctitle={论文中文题目},
 % 	etitle={Thesis English Title},
 %	}
 % \end{latex}
 %
-% \note{下文描述的所有命令都有和自己等价的\cs{cqusetup}形式，请留意。}
+% \note{下文描述的所有命令都有和自己等价的\cs{PRCsetup}形式，请留意。}
 %
 % \subsubsection{个人信息}
 %
@@ -467,7 +455,7 @@
 % \DescribeMacro{\esupervisor}
 % 导师的中英文信息，填写范例：
 % \begin{latex}
-% \cqusetup{
+% \PRCsetup{
 % 	csupervisor	=	{匡振义~~教授},	% 使用连字符来进行不会断行的空格
 % 	esupervisor	=	{Prof. Zhenyi Kuang},
 %		}%
@@ -506,7 +494,7 @@
 % 要求的关键词格式。
 %
 % \begin{latex}
-% \cqusetup{
+% \PRCsetup{
 %   ckeywords={关键词 1, 关键词 2},
 %   ekeywords={keyword 1, keyword 2}
 % }
@@ -518,7 +506,7 @@
 % \myentry{摘要}
 % \DescribeEnv{cabstract}
 % \DescribeEnv{eabstract}
-% 摘要只能使用环境命令来设置，不支持\cs{cqusetup}。
+% 摘要只能使用环境命令来设置，不支持\cs{PRCsetup}。
 %
 % \begin{latex}
 % \begin{cabstract}
@@ -611,8 +599,8 @@
 % \note{如果您的文献资料来源于Web of Science一类的数据库导出，那么您很可能需要使用\textsf{Jabref}一类的文献bib数据管理工具对数据进行清理，以去除每个字段外围的双层花括号（目前已知DOI字段的双层括号会使得参考文献列表出现格式问题）。清理过程是自动而无害的。}
 % 
 %
-% \DescribeMacro{\cquauthpage}
-% 生成原创说明和授权书，这个命令可以带一个\oarg{PDF文件地址}作为参数。这样，在您和您的导师签名之后，您可以单独扫描一下签过名的原创说明和授权书，以\cs{cquauthpage}\oarg{pdf文件地址}的形式将扫描页放入论文的PDF文件中的对应位置。
+% \DescribeMacro{\PRCauthpage}
+% 生成原创说明和授权书，这个命令可以带一个\oarg{PDF文件地址}作为参数。这样，在您和您的导师签名之后，您可以单独扫描一下签过名的原创说明和授权书，以\cs{PRCauthpage}\oarg{pdf文件地址}的形式将扫描页放入论文的PDF文件中的对应位置。
 %
 % \subsection{宏包和特色功能}
 % \subsubsection{双语题注}
@@ -625,7 +613,7 @@
 % \centering
 % \includegraphics[width=0.7\linewidth]{figures/TEST}
 % \bicaption{这是一张测试用图片}{This figure is for test only}
-% \label{fig:cqubadge}
+% \label{fig:PRCbadge}
 % \end{figure}
 % \end{latex}
 %
@@ -634,7 +622,7 @@
 % \begin{tabularx}{cc}
 % \bicaption[这是表录中的段条目]{这是一个很长很长很长的中文题注，你可以写很多行}%
 % 	[This is a really short one.]{Linebreak is for demostration only. It's okay to go without it.}
-% \label{fig:cqubadge}
+% \label{fig:PRCbadge}
 % 	我 & 在\\
 % 	测 & 试\\
 % \end{tabularx}
@@ -642,12 +630,12 @@
 % \DescribeMacro{\eqlist}
 % 重要算式列表\cs{eqlist}和\cs{listeq}命令从v1.12版本后也支持中英双语，用法是\cs{eqlist}\marg{中文}\oarg{英文}，请注意括号。
 %
-% 上面的这些用法都在\cquthesis 的示例文件中有所体现，供您参考。
+% 上面的这些用法都在\PRCthesis 的示例文件中有所体现，供您参考。
 %
 % \note{英文版本的重要算式列表需要在\option{bilinguallist=}\option{combined}或者\option{apart}时才会生效。另外，当且仅当在\option{bilinguallist=}\option{apart}时，\file{main.tex}中的\cs{listoffiguresEN},\cs{listoftablesEN}和\cs{listofequationsEN}才会发挥作用，此时您可以通过调整这些命令的位置来调整图录、表录、方程式列表各自之间以及中英文版本之间的顺序。}
 % \subsubsection{数学环境}
 % \label{sec:math}
-% \cquthesis{} 定义了常用的数学环境：
+% \PRCthesis{} 定义了常用的数学环境：
 %
 % \begin{center}
 % \begin{tabular}{*{7}{l}}\toprule
@@ -732,7 +720,7 @@
 % 本模板已经自动载入了许多表格相关的宏包：
 % \begin{itemize}
 %	\item 如果您是熟练的\LaTeX 用户，\pkg{array}, \pkg{tabularx}, \pkg{booktabs}, \pkg{longtable}, \pkg{multirow}和\pkg{diagbox}会是您得力的助手，其中，\pkg{tabularx}和\pkg{longtable}的字号已经预先适配为五号字；
-% \item \cquthesis 还预先载入了\pkg{tabu}宏包，如果您熟悉这个宏包，或者愿意负担一些学习成本，那么\pkg{tabu}宏包的强大功能会让您满意。
+% \item \PRCthesis 还预先载入了\pkg{tabu}宏包，如果您熟悉这个宏包，或者愿意负担一些学习成本，那么\pkg{tabu}宏包的强大功能会让您满意。
 % \end{itemize}
 %
 % \subsection{其他说明}
@@ -741,7 +729,7 @@
 % \subsection{提问和新功能需求}\label{sec:howtoask}
 %	遇到难以解决的问题了？欢迎您向我反馈，您可以：
 % \begin{itemize}
-%	\item 在Github上\href{https://github.com/nanmu42/cquthesis/issues}{提交Issue};
+%	\item 在Github上\href{https://github.com/nanmu42/PRCthesis/issues}{提交Issue};
 %	\item 加入\href{http://jq.qq.com/?_wv=1027&k=2HvYu95}{重庆大学\TeX 用户组}进行讨论\footnote{即使您不是重庆大学的学子，只要您对\TeX 足够热爱并且为人友善，我们也会热诚地欢迎您。}。
 %\end{itemize}
 % 
@@ -754,28 +742,28 @@
 % \StopEventually{\PrintChanges\PrintIndex}
 % \clearpage
 % \section{实现细节}
-% 下面这些内容面向\LaTeX 宏包开发者或者对\cquthesis 开发感兴趣的用户，如果您有任何意见或建议或想法，都欢迎到Github\href{https://github.com/nanmu42/cquthesis/issues}{提交Issue}。您对模板开发或者本文档的撰写的任何贡献都会受到诚挚欢迎！
+% 下面这些内容面向\LaTeX 宏包开发者或者对\PRCthesis 开发感兴趣的用户，如果您有任何意见或建议或想法，都欢迎到Github\href{https://github.com/nanmu42/PRCthesis/issues}{提交Issue}。您对模板开发或者本文档的撰写的任何贡献都会受到诚挚欢迎！
 % \subsection{模板信息}
 %    \begin{macrocode}
 %<cls>\NeedsTeXFormat{LaTeX2e}[1999/12/01]
-%<cls>\ProvidesClass{cquthesis}
-%<cfg>\ProvidesFile{cquthesis.cfg}
+%<cls>\ProvidesClass{PRCthesis}
+%<cfg>\ProvidesFile{PRCthesis.cfg}
 %<cls|cfg>[2016/12/07 v1.16 Chongqing University Thesis Template]
 %    \end{macrocode}
 % 定义一些开发常量：
 %    \begin{macrocode}
 %<*cls>
 \hyphenation{Cqu-Thesis}
-\newcommand{\cquthesis}{\textsc{CquThesis}}
+\newcommand{\PRCthesis}{\textsc{CquThesis}}
 \def\version{1.16}
 %</cls>
 %    \end{macrocode}
-% \file{cquthesis.cfg}中，涉及文档部件的部分常量：
+% \file{PRCthesis.cfg}中，涉及文档部件的部分常量：
 % \changes{v0.9.0}{2016/05/16}{把目录加入到了PDF书签中。}
 %    \begin{macrocode}
 %<*cfg>
-\def\cqueqshortname							{式}	
-\def\cqu@denotation@name				{主要符号对照表}
+\def\PRCeqshortname							{式}	
+\def\PRC@denotation@name				{主要符号对照表}
 \def\shorttablename							{表}
 \def\shorttablenameEN						{Table}
 \def\shortfigurename						{图}
@@ -784,8 +772,8 @@
 \def\listofequationsnameEN			{\textbf{List of Equations}}
 \def\listoffiguresnameEN				{\textbf{List of Figures}}
 \def\listoftablesnameEN					{\textbf{List of Tables}}
-\def\cqu@bib@name								{参考文献}
-\def\cqu@tocnameinbkmark				{目{ }录}
+\def\PRC@bib@name								{参考文献}
+\def\PRC@tocnameinbkmark				{目{ }录}
 \newcommand{\parenthesesthis}[1]{（#1）}
 %</cfg>
 %    \end{macrocode}
@@ -795,18 +783,18 @@
 %<*cls>
 \RequirePackage{kvoptions}
 \SetupKeyvalOptions{
-	family=cqu,
-	prefix=cqu@,
+	family=PRC,
+	prefix=PRC@,
 	setkeys=\kvsetkeys}
 %    \end{macrocode}
 % 定义用户类型
 %    \begin{macrocode}
-\newif\ifcqu@bachelor
-\newif\ifcqu@master
-\newif\ifcqu@doctor
-\cqu@bachelorfalse\cqu@masterfalse\cqu@doctorfalse
-\define@key{cqu}{type}{%
-	\expandafter\csname cqu@#1true\endcsname}
+\newif\ifPRC@bachelor
+\newif\ifPRC@master
+\newif\ifPRC@doctor
+\PRC@bachelorfalse\PRC@masterfalse\PRC@doctorfalse
+\define@key{PRC}{type}{%
+	\expandafter\csname PRC@#1true\endcsname}
 %    \end{macrocode}
 % 定义是否使用本科文学类论文标题格式
 %    \begin{macrocode}
@@ -832,7 +820,7 @@
 \newif\if@twosideprint
 \newif\if@autoprint
 \@onesideprintfalse\@twosideprintfalse\@autoprintfalse
-\define@key{cqu}{printmode}{%
+\define@key{PRC}{printmode}{%
 	\expandafter\csname @#1printtrue\endcsname}
 %    \end{macrocode}
 % 论文是否保密（默认：关），尚未支持，在计划中
@@ -853,7 +841,7 @@
 \newif\if@bicombined
 \newif\if@biapart
 \@biofffalse\@bicombinedfalse\@biapartfalse
-\define@key{cqu}{bilinguallist}{%
+\define@key{PRC}{bilinguallist}{%
 	\@biofffalse\@bicombinedfalse\@biapartfalse
 	\expandafter\csname @bi#1true\endcsname}
 %    \end{macrocode}
@@ -863,13 +851,13 @@
 %    \end{macrocode}
 % 打开默认选项，处理选项
 %    \begin{macrocode}
-\kvsetkeys{cqu}{}
+\kvsetkeys{PRC}{}
 \ProcessKeyvalOptions*
 \PassOptionsToPackage{no-math}{fontspec}
 %    \end{macrocode}
 % 为CTeXBook定义选项，使用CTeX原生的的Openright和Openany解决方案：
 %    \begin{macrocode}
-\ifcqu@openany
+\ifPRC@openany
 	\LoadClass[openany,a4paper,oneside,UTF8,zihao=-4,scheme=plain,linespread=1.39,space=auto]{ctexbook}
 \else
 	\LoadClass[openright,a4paper,oneside,UTF8,zihao=-4,scheme=plain,linespread=1.39,space=auto]{ctexbook}
@@ -877,10 +865,10 @@
 %    \end{macrocode}
 % 用户必须提供用户类型：
 %    \begin{macrocode}
-\ifcqu@bachelor\relax\else
-	\ifcqu@master\relax\else
-		\ifcqu@doctor\relax\else
-			\ClassError{cquthesis}%
+\ifPRC@bachelor\relax\else
+	\ifPRC@master\relax\else
+		\ifPRC@doctor\relax\else
+			\ClassError{PRCthesis}%
 				{Specified thesis type is obligatory: \MessageBreak
 					type=[bachelor|master|doctor]}{}
 		\fi
@@ -892,7 +880,7 @@
 \if@autoprint\relax\else
 	\if@onesideprint\relax\else
 		\if@twosideprint\relax\else
-			\ClassWarning{cquthesis}%
+			\ClassWarning{PRCthesis}%
 				{Unexpected or missing print mode, processing with AUTO: \MessageBreak
 					printmode=[oneside|twoside|auto]}{}
 			\@autoprinttrue
@@ -905,8 +893,8 @@
 \if@bioff\relax\else
 	\if@bicombined\relax\else
 		\if@biapart\relax\else
-		\kvsetkeys{cqu}{bilinguallist=off,}
-		\ClassWarning{cquthesis}%
+		\kvsetkeys{PRC}{bilinguallist=off,}
+		\ClassWarning{PRCthesis}%
 		{Unexpected or missing bilingual list mode, processing with OFF: \MessageBreak
 			bilinguallist=[off|combined|apart]}{}
 		\fi
@@ -942,7 +930,7 @@
 %
 % 解决各种文档部件需求，如表格、题注、插图等
 % \changes{v0.9.41}{2016/05/25}{修正了\pkg{tgcursor}使\cs{textbf}失效的Bug，现在起使用\pkg{courier}代替。}
-% \changes{v1.12}{2016/07/06}{得益于\pkg{caption}和\pkg{bicaption}和\pkg{newfloat}三个宏包，\cquthesis 支持双语题注了。}
+% \changes{v1.12}{2016/07/06}{得益于\pkg{caption}和\pkg{bicaption}和\pkg{newfloat}三个宏包，\PRCthesis 支持双语题注了。}
 %    \begin{macrocode}
 \RequirePackage{newfloat}
 \RequirePackage{caption}
@@ -1027,16 +1015,16 @@
 % \begin{macro}{\cleardoublepage}
 % 首页右开的时候，全空的左页不留页眉页脚
 %    \begin{macrocode}
-\let\cqu@cleardoublepage\cleardoublepage
+\let\PRC@cleardoublepage\cleardoublepage
 \renewcommand{\cleardoublepage}{%
-	\clearpage{\pagestyle{style@empty}\cqu@cleardoublepage}
+	\clearpage{\pagestyle{style@empty}\PRC@cleardoublepage}
 }%\cleardoublepage
 %    \end{macrocode}
 % \end{macro}
-% \begin{macro}{\cqu@addblankpage}
+% \begin{macro}{\PRC@addblankpage}
 % 用来在强制完成空页工作，注意这里的pagestyle调整范围在花括号之内
 %    \begin{macrocode}
-\newcommand\cqu@addblankpage{%
+\newcommand\PRC@addblankpage{%
 	\afterpage{%
 		{\null\pagestyle{style@empty}\clearpage}}}
 %    \end{macrocode}
@@ -1089,12 +1077,12 @@
 %    \end{macrocode}
 %
 % \subsubsection{单双页打印的自动判定}
-% 重庆大学的单双面打印和论文实际页数有关，此处读取前置部分后的最大页码，自动判断是否需要双面打印。很有趣，本科生70页想要双面打印比硕士生60页还难。此处立flag用来配合\cs{cqu@addblankpage}
+% 重庆大学的单双面打印和论文实际页数有关，此处读取前置部分后的最大页码，自动判断是否需要双面打印。很有趣，本科生70页想要双面打印比硕士生60页还难。此处立flag用来配合\cs{PRC@addblankpage}
 %    \begin{macrocode}
 \RequirePackage{totcount}
 \regtotcounter[auxfile=maxpage.aux]{page}
 \if@autoprint
-	\ifcqu@bachelor
+	\ifPRC@bachelor
 		\ifnum\totvalue{page}>70 \@twosideprinttrue\else\@onesideprinttrue\fi	
 	\else
 		\ifnum \totvalue{page}>60 \@twosideprinttrue\else\@onesideprinttrue\fi 
@@ -1105,17 +1093,17 @@
 % 在log中记录下打印模式：
 %    \begin{macrocode}
 \if@onesideprint
-	\ClassWarning{cquthesis}{Printing under oneside mode.}{}
+	\ClassWarning{PRCthesis}{Printing under oneside mode.}{}
 \else
 	\if@twosideprint
 		\geometry{twoside}
-		\ClassWarning{cquthesis}{Printing under twoside mode.}{}
+		\ClassWarning{PRCthesis}{Printing under twoside mode.}{}
 	\fi
 \fi
 %    \end{macrocode}
 %
 % \subsubsection{页眉和页脚}
-% 页眉页脚共有三种模式： 1. 页眉页脚全空（用于标题页、主体部分另页右开等）；2. 用来修正双页打印时的页眉遮挡问题（右开的索引页眉不再是\cs{cqu@thesisname}）；3. 页眉页脚齐全（用于一般正文页面，这里自动判定用户类型和打印单双面）。
+% 页眉页脚共有三种模式： 1. 页眉页脚全空（用于标题页、主体部分另页右开等）；2. 用来修正双页打印时的页眉遮挡问题（右开的索引页眉不再是\cs{PRC@thesisname}）；3. 页眉页脚齐全（用于一般正文页面，这里自动判定用户类型和打印单双面）。
 %
 % 定制页眉页脚模式，全部以style@开头。
 %    \begin{macrocode}
@@ -1134,10 +1122,10 @@
 \fancypagestyle{style@normal}{%
 	\fancyhead{}
 	\if@twosideprint
-	\fancyhead[EC]{\zihao{-5}\songti\cqu@thesisname}
+	\fancyhead[EC]{\zihao{-5}\songti\PRC@thesisname}
 	\fancyhead[OC]{\zihao{-5}\songti\leftmark}
 	\else
-	\fancyhead[L]{\zihao{-5}\songti\cqu@thesisname}
+	\fancyhead[L]{\zihao{-5}\songti\PRC@thesisname}
 	\fancyhead[R]{\zihao{-5}\songti\leftmark}
 	\fi
 	\fancyfoot{}
@@ -1145,17 +1133,17 @@
 	\renewcommand{\headrulewidth}{0.4pt}
 	\renewcommand{\footrulewidth}{0pt}}
 %    \end{macrocode}
-% \begin{macro}{\cqu@fixhead}
+% \begin{macro}{\PRC@fixhead}
 %	修正页眉遮挡，这个命令要在标题生成的地方使用
 %    \begin{macrocode}
-\newcommand{\cqu@fixhead}{%
+\newcommand{\PRC@fixhead}{%
 	\if@twosideprint	%仅双页打印需要修正
 		\checkoddpage
 			\ifoddpage\relax\else
 				\thispagestyle{style@fixhead}
 		\fi
 	\fi
-}%\cqu@fixhead
+}%\PRC@fixhead
 %    \end{macrocode}
 % \end{macro}
 % 修正fancyhdr的问题，同时让页眉不显示第0章的编号：
@@ -1206,7 +1194,7 @@
 		nameformat = \zihao{3},
 		titleformat = \zihao{3},
 		aftername = \hskip\ccwd,
-		number = {\ifcqu@liberalformat\chinese{chapter}\else\thechapter\fi},
+		number = {\ifPRC@liberalformat\chinese{chapter}\else\thechapter\fi},
 		beforeskip = 13bp,
 		afterskip = 24bp,
 	},
@@ -1216,7 +1204,7 @@
 		nameformat = \bfseries\zihao{-3},
 		titleformat = \zihao{-3},
 		aftername = \hskip\ccwd,
-		number = {\ifcqu@liberalformat\parenthesesthis{\chinese{section}}\else\thesection\fi},
+		number = {\ifPRC@liberalformat\parenthesesthis{\chinese{section}}\else\thesection\fi},
 		beforeskip = 24bp plus 1ex minus .2ex,
 		afterskip = 6bp plus .2ex,
 	},
@@ -1226,7 +1214,7 @@
 		nameformat = \bfseries\zihao{4},
 		titleformat = \zihao{4},
 		aftername = \hskip\ccwd,
-		number = {\ifcqu@liberalformat\arabic{subsection}\else\thesubsection\fi},
+		number = {\ifPRC@liberalformat\arabic{subsection}\else\thesubsection\fi},
 		beforeskip = 12bp plus 1bp,
 		afterskip = 10bp,
 		fixskip = true,
@@ -1237,8 +1225,8 @@
 		indent = \parindent,
 		aftertitle = {},
 		numbering = true,
-		number = {\ifcqu@liberalformat\parenthesesthis{\arabic{subsubsection}}\else\@circlenum{subsubsection}\fi},
-		numberformat+ = {\ifcqu@liberalformat\relax\else\zihao{4}\fi},
+		number = {\ifPRC@liberalformat\parenthesesthis{\arabic{subsubsection}}\else\@circlenum{subsubsection}\fi},
+		numberformat+ = {\ifPRC@liberalformat\relax\else\zihao{4}\fi},
 		beforeskip = 10bp plus .5bp,
 		afterskip = 10bp,
 		fixskip = true,
@@ -1253,7 +1241,7 @@
 	paragraph = {
 		name = {},
 		runin = true,
-		aftertitle = {\ClassError{cquthesis}%
+		aftertitle = {\ClassError{PRCthesis}%
 			{Level-5 and below sections are unsupported intentionally.}{}},
 		beforeskip = 1ex plus 0.5ex minus .2ex,
 		afterskip = 1em,
@@ -1263,7 +1251,7 @@
 		runin = true,
 		indent = \parindent,
 		indent = 0pt,
-		aftertitle = {\ClassError{cquthesis}%
+		aftertitle = {\ClassError{PRCthesis}%
 			{Level-5 and below sections are unsupported intentionally.}{}},
 		beforeskip = 1ex plus 0.5ex minus .2ex,
 		afterskip = 1em,
@@ -1291,7 +1279,7 @@
 %<*cls>
 \def\@circlenum#1{%
 	\ifnum \value{#1} >10
-	\ClassError{cquthesis}%
+	\ClassError{PRCthesis}%
 	{More than 10 subsubsections in a subsection cannot be handled.}{}
 	\fi
 	\ding{\the\numexpr\value{#1}+171\relax}%
@@ -1303,40 +1291,40 @@
 % 设置分割线、字号和悬挂缩进
 %    \begin{macrocode}
 \def\footnoterule{\vskip-3\p@\hrule\@width0.3\textwidth\@height0.4\p@\vskip2.6\p@}
-\let\cqu@footnotesize\footnotesize
-\renewcommand{\footnotesize}{\cqu@footnotesize\zihao{-5}}
+\let\PRC@footnotesize\footnotesize
+\renewcommand{\footnotesize}{\PRC@footnotesize\zihao{-5}}
 \footnotemargin1.5em\relax
 %    \end{macrocode}
 %
 % 脚注部分将标注换为正文大小，这个过程是动态的：
 %    \begin{macrocode}
-\let\cqu@makefnmark\@makefnmark
-\def\cqu@@makefnmark{\mbox{{\normalfont\@thefnmark}}}
-\pretocmd{\@makefntext}{\let\@makefnmark\cqu@@makefnmark}{}{}
-\apptocmd{\@makefntext}{\let\@makefnmark\cqu@makefnmark}{}{}
+\let\PRC@makefnmark\@makefnmark
+\def\PRC@@makefnmark{\mbox{{\normalfont\@thefnmark}}}
+\pretocmd{\@makefntext}{\let\@makefnmark\PRC@@makefnmark}{}{}
+\apptocmd{\@makefntext}{\let\@makefnmark\PRC@makefnmark}{}{}
 %</cls>
 %    \end{macrocode}
 % footmisc定义新脚注symbol，minipage需要额外定义一行，脚注不能大于10
 %    \begin{macrocode}
 %<*cfg>
-\DefineFNsymbols{cqufnsymbol}{
+\DefineFNsymbols{PRCfnsymbol}{
 	{\ding{172}}	{\ding{173}}
 	{\ding{174}}	{\ding{175}}
 	{\ding{176}}	{\ding{177}}
 	{\ding{178}}	{\ding{179}}
 	{\ding{180}}	{\ding{181}}
-}%cqufnsymbol
-\setfnsymbol{cqufnsymbol}
+}%PRCfnsymbol
+\setfnsymbol{PRCfnsymbol}
 \renewcommand\thempfootnote{\fnsymbol{mpfootnote}}
 \pretocmd{\thefootnote}{%
 	\ifnum \value{footnote} >10
-	\ClassError{cquthesis}%
+	\ClassError{PRCthesis}%
 	{More than 10 footnotes in a single page are not supported.}{}
 	\fi
 }{}{}
 \pretocmd{\thempfootnote}{%
 	\ifnum \value{mpfootnote} >10
-	\ClassError{cquthesis}%
+	\ClassError{PRCthesis}%
 	{More than 10 footnotes in a single page are not supported.}{}
 	\fi
 }{}{}
@@ -1348,8 +1336,8 @@
 %    \begin{macrocode}
 %<*cls>
 \allowdisplaybreaks[4]
-\let\cqu@tagform@\tagform@
-\renewcommand{\eqref}[1]{\cqueqshortname\textup{(\ref{#1})}}
+\let\PRC@tagform@\tagform@
+\renewcommand{\eqref}[1]{\PRCeqshortname\textup{(\ref{#1})}}
 %    \end{macrocode}
 %
 % 定理环境
@@ -1498,14 +1486,14 @@
 % \changes{v1.12}{2016/07/06}{题注的字体设置对中英文都进行了适配。}
 % \changes{v1.16}{2016/12/07}{正文中的题注的名称和序号不再加粗，同时优化了题注和插图（插表）的垂直距离。}
 %    \begin{macrocode}
-\def\cqu@tabular{\zihao{5}\@tabular}
-\DeclareCaptionLabelFormat{cqu}{{\zihao{5}\rmfamily\songti #1~#2}}
-\DeclareCaptionLabelSeparator{cqu}{\hspace{\ccwd}}
-\DeclareCaptionFont{cqu}{\zihao{5}\rmfamily\songti}
-\captionsetup{labelformat=cqu,labelsep=cqu,font=cqu}
+\def\PRC@tabular{\zihao{5}\@tabular}
+\DeclareCaptionLabelFormat{PRC}{{\zihao{5}\rmfamily\songti #1~#2}}
+\DeclareCaptionLabelSeparator{PRC}{\hspace{\ccwd}}
+\DeclareCaptionFont{PRC}{\zihao{5}\rmfamily\songti}
+\captionsetup{labelformat=PRC,labelsep=PRC,font=PRC}
 \captionsetup[table]{position=top,belowskip=6bp,aboveskip=0bp}
 \captionsetup[figure]{position=bottom,belowskip=0bp,aboveskip=6bp}
-\captionsetup[sub]{font=cqu,skip=6bp}
+\captionsetup[sub]{font=PRC,skip=6bp}
 \renewcommand{\thesubfigure}{(\alph{subfigure})}
 \renewcommand{\thesubtable}{(\alph{subtable})}
 %    \end{macrocode}
@@ -1572,8 +1560,8 @@
 %    \begin{macrocode}
 \setlength{\LTpre}{\bigskipamount}
 \setlength{\LTpost}{\bigskipamount}
-\let\cqu@LT@array\LT@array
-\def\LT@array{\zihao{5}\cqu@LT@array}
+\let\PRC@LT@array\LT@array
+\def\LT@array{\zihao{5}\PRC@LT@array}
 %    \end{macrocode}
 %
 % \subsubsection{代码环境}
@@ -1629,7 +1617,7 @@
 % \begin{environment}{C++}
 % \changes{v1.16}{2016/12/07}{出于简明的考虑，\env{Cplus}环境现在已经更名为\env{C++}环境。\env{Cplus}环境为历史兼容而保留定义。修改了语言环境定义中的一个错误，现在C++和Python环境能够正确地进行代码上色了。}
 % \begin{environment}{Python}
-% \cquthesis 内置了两个代码环境，\env{C++}和\env{Python}，您可以参照代码在\file{cquthesis.sty}中定义自己的环境。\env{Cplus}环境为历史兼容而保留定义。
+% \PRCthesis 内置了两个代码环境，\env{C++}和\env{Python}，您可以参照代码在\file{PRCthesis.sty}中定义自己的环境。\env{Cplus}环境为历史兼容而保留定义。
 %    \begin{macrocode}
 \lstnewenvironment{C++}{\lstset{style=lstStyleCplus}}{}
 \lstnewenvironment{Cplus}{\lstset{style=lstStyleCplus}}{}
@@ -1646,38 +1634,38 @@
 % \begin{macro}{\xuhaoseparator}
 % \cs{xuhao}会自增并输出内容，\cs{resetxuhao}或者\cs{xuhao}\oarg{1}会将序号置为1，后者会输出，\cs{xuhaotype}用来设定序号风格，\cs{xuhaoseparator}为序号之后的分隔符，可以用\cs{renewcommand}来定义。
 %    \begin{macrocode}
-\newcounter{cquXuHao}
-\newcounter{cquXuHaoType}
-\setcounter{cquXuHaoType}{1}
+\newcounter{PRCXuHao}
+\newcounter{PRCXuHaoType}
+\setcounter{PRCXuHaoType}{1}
 \newcommand{\xuhaoseparator}{}
 \newcommand{\xuhaotype}[1][1]{
-	\ifnum #1>6 \ClassError{cquthesis}%
+	\ifnum #1>6 \ClassError{PRCthesis}%
 	{Available choices from 1-6.}{}%
 	\fi
-	\setcounter{cquXuHaoType}{#1}
+	\setcounter{PRCXuHaoType}{#1}
 }%\xuhaotype
 \newcommand{\output@xuhao}{%
-	\ifcase\value{cquXuHaoType}
-	\or	\arabic{cquXuHao}	%1
-	\or	\Alph{cquXuHao}	%2
-	\or	\alph{cquXuHao}	%3
-	\or	\Roman{cquXuHao}	%4
-	\or	\roman{cquXuHao}	%5
-	\or	\ifnum\value{cquXuHao}>9\ClassError{cquthesis}%
+	\ifcase\value{PRCXuHaoType}
+	\or	\arabic{PRCXuHao}	%1
+	\or	\Alph{PRCXuHao}	%2
+	\or	\alph{PRCXuHao}	%3
+	\or	\Roman{PRCXuHao}	%4
+	\or	\roman{PRCXuHao}	%5
+	\or	\ifnum\value{PRCXuHao}>9\ClassError{PRCthesis}%
 	{Xuhao(rownum) of type-6 must be under 10.}{}%
-	\else\fnsymbol{cquXuHao}
+	\else\fnsymbol{PRCXuHao}
 	\fi	%6
 	\fi
 }%\output@xuhao
 \newcommand{\xuhao}[1][0]{
 	\ifcase #1
-	\stepcounter{cquXuHao}		%0
+	\stepcounter{PRCXuHao}		%0
 	\output@xuhao\xuhaoseparator\xspace
-	\or	\resetxuhao\stepcounter{cquXuHao}		%1
+	\or	\resetxuhao\stepcounter{PRCXuHao}		%1
 	\output@xuhao\xuhaoseparator\xspace
 	\fi
 }%\xuhao
-\newcommand{\resetxuhao}{\setcounter{cquXuHao}{0}}
+\newcommand{\resetxuhao}{\setcounter{PRCXuHao}{0}}
 %    \end{macrocode}
 % \end{macro}
 % \end{macro}
@@ -1702,13 +1690,13 @@
 %
 % \subsection{封面绘制}
 % \subsubsection{信息录入}
-% \begin{macro}{\cqu@def@term}
+% \begin{macro}{\PRC@def@term}
 % 定义一个Key--Definer:
 %    \begin{macrocode}
-\def\cqu@def@term #1{%
-	\define@key{cqu}{#1}{\csname #1\endcsname{##1}}
+\def\PRC@def@term #1{%
+	\define@key{PRC}{#1}{\csname #1\endcsname{##1}}
 	\expandafter\gdef\csname #1\endcsname##1{%
-		\expandafter\gdef\csname cqu@#1\endcsname{##1}}
+		\expandafter\gdef\csname PRC@#1\endcsname{##1}}
 	\csname #1\endcsname{}}
 %    \end{macrocode}
 % \end{macro}
@@ -1716,34 +1704,34 @@
 % 
 % 论文的中英文题目（封面第二行）
 %    \begin{macrocode}
-\cqu@def@term{ctitle}
-\cqu@def@term{etitle}
+\PRC@def@term{ctitle}
+\PRC@def@term{etitle}
 %    \end{macrocode}
 %
 % 作者的信息（校徽下方）
 %    \begin{macrocode}
-\cqu@def@term{cauthor}
-\cqu@def@term{eauthor}
-\cqu@def@term{studentid}
-\cqu@def@term{csupervisor}
-\cqu@def@term{esupervisor}
-\cqu@def@term{cassistsupervisor}
-\cqu@def@term{cextrasupervisor}
-\cqu@def@term{eassistsupervisor}
-\cqu@def@term{cpsupervisor}
-\cqu@def@term{epsupervisor}
-\cqu@def@term{cmajor}
-\cqu@def@term{emajor}
-\cqu@def@term{cclass}
-\cqu@def@term{edgree}
+\PRC@def@term{cauthor}
+\PRC@def@term{eauthor}
+\PRC@def@term{studentid}
+\PRC@def@term{csupervisor}
+\PRC@def@term{esupervisor}
+\PRC@def@term{cassistsupervisor}
+\PRC@def@term{cextrasupervisor}
+\PRC@def@term{eassistsupervisor}
+\PRC@def@term{cpsupervisor}
+\PRC@def@term{epsupervisor}
+\PRC@def@term{cmajor}
+\PRC@def@term{emajor}
+\PRC@def@term{cclass}
+\PRC@def@term{edgree}
 %    \end{macrocode}
 %
 % 底部的学院名称和日期
 %    \begin{macrocode}
-\cqu@def@term{cdepartment}
-\cqu@def@term{edepartment}
-\cqu@def@term{mycdate}
-\cqu@def@term{myedate}
+\PRC@def@term{cdepartment}
+\PRC@def@term{edepartment}
+\PRC@def@term{mycdate}
+\PRC@def@term{myedate}
 %</cls>
 %    \end{macrocode}
 % 日期的中英文支持
@@ -1772,24 +1760,24 @@
 % 收集关键词并且做关键词分割
 %    \begin{macrocode}
 %<*cls>
-\def\cqu@parse@keywords#1{
-	\define@key{cqu}{#1}{\csname #1\endcsname{##1}}
-	\expandafter\gdef\csname cqu@#1\endcsname{}
+\def\PRC@parse@keywords#1{
+	\define@key{PRC}{#1}{\csname #1\endcsname{##1}}
+	\expandafter\gdef\csname PRC@#1\endcsname{}
 	\expandafter\gdef\csname #1\endcsname##1{
 		\@for\reserved@a:=##1\do{
-			\expandafter\ifx\csname cqu@#1\endcsname\@empty\else
-			\expandafter\g@addto@macro\csname cqu@#1\endcsname{%
-				\ignorespaces\csname cqu@#1@separator\endcsname}
+			\expandafter\ifx\csname PRC@#1\endcsname\@empty\else
+			\expandafter\g@addto@macro\csname PRC@#1\endcsname{%
+				\ignorespaces\csname PRC@#1@separator\endcsname}
 			\fi
 			\expandafter\expandafter\expandafter\g@addto@macro%
-			\expandafter\csname cqu@#1\expandafter\endcsname\expandafter{\reserved@a}}}}
-\cqu@parse@keywords{ckeywords}
-\cqu@parse@keywords{ekeywords}
+			\expandafter\csname PRC@#1\expandafter\endcsname\expandafter{\reserved@a}}}}
+\PRC@parse@keywords{ckeywords}
+\PRC@parse@keywords{ekeywords}
 %    \end{macrocode}
 %
 % 使用kvoptions提供key=value格式支持
 %    \begin{macrocode}
-\def\cqusetup{\kvsetkeys{cqu}}
+\def\PRCsetup{\kvsetkeys{PRC}}
 %    \end{macrocode}
 %
 % \subsubsection{绘制中文封面}
@@ -1804,70 +1792,70 @@
 	\begin{center}
 		\rule{0mm}{15mm}
 		\sffamily\heiti
-		\ifcqu@bachelor
-		\zihao{-2}\cqu@thesistypenameCN
+		\ifPRC@bachelor
+		\zihao{-2}\PRC@thesistypenameCN
 		\\	\vspace{\stretch{1}}
-		\zihao{2}\cqu@ctitle
+		\zihao{2}\PRC@ctitle
 		\\	\vspace{\stretch{2}}
 		\includegraphics[width=6cm]{CQUbadge.pdf}
 		\\	\vspace{\stretch{2}}
 		\else
-		\zihao{2}\cqu@ctitle
+		\zihao{2}\PRC@ctitle
 		\\	\vspace{\stretch{1}}
 		\includegraphics[width=6cm]{CQUbadge.pdf}
 		\\	\vspace{\stretch{1}}
-		\zihao{-2}\cqu@thesistypenameCN
-		\ifcqu@master{}\\\cqu@mastertype\fi
+		\zihao{-2}\PRC@thesistypenameCN
+		\ifPRC@master{}\\\PRC@mastertype\fi
 		\\	\vspace{\stretch{2}}		
 		\fi
-		\ifcqu@bachelor
+		\ifPRC@bachelor
 		\zihao{3}
 		\begin{varwidth}{\textwidth}
 			\begin{CJKfilltwosides}{4.5\ccwd}
-				\cqu@studentCN\cqu@title@separatorCN\\
-				\cqu@studentnumCN\cqu@title@separatorCN\\
-				\cqu@supervisorCN\cqu@title@separatorCN\\
-				\ifdefstring{\cqu@cassistsupervisor}{}{\relax}{{\zihao{5}\begin{CJKfilltwosides}{66bp}\cqu@assistsupervisorCN\end{CJKfilltwosides}}\hfill\cqu@title@separatorCN\\}
-				\ifdefstring{\cqu@cextrasupervisor}{}{\relax}{{\zihao{5}\begin{CJKfilltwosides}{66bp}\cqu@extrasupervisorCN\end{CJKfilltwosides}}\hfill\cqu@title@separatorCN\\}
-				\cqu@majorCN\cqu@title@separatorCN
+				\PRC@studentCN\PRC@title@separatorCN\\
+				\PRC@studentnumCN\PRC@title@separatorCN\\
+				\PRC@supervisorCN\PRC@title@separatorCN\\
+				\ifdefstring{\PRC@cassistsupervisor}{}{\relax}{{\zihao{5}\begin{CJKfilltwosides}{66bp}\PRC@assistsupervisorCN\end{CJKfilltwosides}}\hfill\PRC@title@separatorCN\\}
+				\ifdefstring{\PRC@cextrasupervisor}{}{\relax}{{\zihao{5}\begin{CJKfilltwosides}{66bp}\PRC@extrasupervisorCN\end{CJKfilltwosides}}\hfill\PRC@title@separatorCN\\}
+				\PRC@majorCN\PRC@title@separatorCN
 			\end{CJKfilltwosides}
 		\end{varwidth}
 		\else
 		\zihao{3}
 		\begin{varwidth}{\textwidth}
 			\begin{CJKfilltwosides}{4.5\ccwd}
-				\cqu@studentCN\cqu@title@separatorCN\\
-				\cqu@supervisorCN\cqu@title@separatorCN\\
-				\ifcqu@academic
-				\cqu@majorCN\cqu@title@separatorCN\\
+				\PRC@studentCN\PRC@title@separatorCN\\
+				\PRC@supervisorCN\PRC@title@separatorCN\\
+				\ifPRC@academic
+				\PRC@majorCN\PRC@title@separatorCN\\
 				\else
-				\cqu@psupervisorCN\cqu@title@separatorCN\\
+				\PRC@psupervisorCN\PRC@title@separatorCN\\
 				\fi
-				\cqu@majorclassCN\cqu@title@separatorCN
+				\PRC@majorclassCN\PRC@title@separatorCN
 			\end{CJKfilltwosides}
 		\end{varwidth}
 		\fi
 		\hskip.5\ccwd
 		\zihao{3}
 		\begin{varwidth}{\textwidth}%
-			\mbox{\cqu@cauthor}\\
-			\ifcqu@bachelor\cqu@studentid\\\fi
-			\cqu@csupervisor\\ %不要放在盒子里
-			\ifcqu@academic %这里有点复杂
-			\ifcqu@bachelor
-			\ifdefstring{\cqu@cassistsupervisor}{}{\relax}{\cqu@cassistsupervisor\\}
-			\ifdefstring{\cqu@cextrasupervisor}{}{\relax}{\cqu@cextrasupervisor\\}
+			\mbox{\PRC@cauthor}\\
+			\ifPRC@bachelor\PRC@studentid\\\fi
+			\PRC@csupervisor\\ %不要放在盒子里
+			\ifPRC@academic %这里有点复杂
+			\ifPRC@bachelor
+			\ifdefstring{\PRC@cassistsupervisor}{}{\relax}{\PRC@cassistsupervisor\\}
+			\ifdefstring{\PRC@cextrasupervisor}{}{\relax}{\PRC@cextrasupervisor\\}
 			\fi
-			\mbox{\cqu@cmajor}
-			\ifcqu@bachelor\relax\else\\\cqu@cclass\fi
+			\mbox{\PRC@cmajor}
+			\ifPRC@bachelor\relax\else\\\PRC@cclass\fi
 			\else
-			\cqu@cpsupervisor\\
-			\cqu@cclass
+			\PRC@cpsupervisor\\
+			\PRC@cclass
 			\fi
 		\end{varwidth}
 		\\	\vspace{\stretch{2}}
-		\zihao{-2}\cqu@universitynameCN\cqu@cdepartment\\[1mm]
-		\zihao{3}\ifdefempty{\cqu@mycdate}{\cdate}{\cqu@mycdate}
+		\zihao{-2}\PRC@universitynameCN\PRC@cdepartment\\[1mm]
+		\zihao{3}\ifdefempty{\PRC@mycdate}{\cdate}{\PRC@mycdate}
 		\vspace{10mm}
 	\end{center}}
 %    \end{macrocode}
@@ -1885,35 +1873,35 @@
 	\begin{center}
 		\rule{0mm}{15mm}
 		\sffamily
-		\ifcqu@bachelor
-			\zihao{-2}\cqu@thesistypenameEN
+		\ifPRC@bachelor
+			\zihao{-2}\PRC@thesistypenameEN
 			\\	\vspace{\stretch{2}}
-			\zihao{-1}\textbf{\cqu@etitle}
+			\zihao{-1}\textbf{\PRC@etitle}
 			\\	\vspace{\stretch{1}}
 			\includegraphics[width=5cm]{CQUbadge.pdf}
 			\\	\vspace{\stretch{2}}
-			\zihao{3}\textbf{\cqu@studentEN\cqu@title@separatorEN\mbox{\cqu@eauthor}}\\
-			\cqu@supervisorEN\mbox{\cqu@esupervisor}\\
-			\ifdefstring{\cqu@eassistsupervisor}{}{\relax}{\cqu@assistsupervisorEN\cqu@title@separatorEN\mbox{\cqu@eassistsupervisor}\\}
-			\cqu@majorEN\cqu@title@separatorEN\mbox{\cqu@emajor}
+			\zihao{3}\textbf{\PRC@studentEN\PRC@title@separatorEN\mbox{\PRC@eauthor}}\\
+			\PRC@supervisorEN\mbox{\PRC@esupervisor}\\
+			\ifdefstring{\PRC@eassistsupervisor}{}{\relax}{\PRC@assistsupervisorEN\PRC@title@separatorEN\mbox{\PRC@eassistsupervisor}\\}
+			\PRC@majorEN\PRC@title@separatorEN\mbox{\PRC@emajor}
 		\else
-			\zihao{-1}\textbf{\cqu@etitle}
+			\zihao{-1}\textbf{\PRC@etitle}
 			\\	\vspace{\stretch{2}}
 			\includegraphics[width=5cm]{CQUbadge.pdf}
 			\\	\vspace{\stretch{2}}
-			\zihao{3}\cqu@thesistypenameEN
+			\zihao{3}\PRC@thesistypenameEN
 			\\[1mm]
-			\textbf{\cqu@workby}
+			\textbf{\PRC@workby}
 			\\[2mm]
-			\zihao{3}\mbox{\textbf{\cqu@eauthor}}
+			\zihao{3}\mbox{\textbf{\PRC@eauthor}}
 			\\	\vspace{\stretch{1}}
-			\textbf{\cqu@supervisorEN}\textbf{\cqu@esupervisor}\\
-			\ifcqu@academic\relax\else\textbf{\cqu@psupervisorEN\cqu@title@separatorEN\cqu@epsupervisor}\\\fi
-			\textbf{\cqu@majorEN\cqu@title@separatorEN}\mbox{\textbf{\cqu@emajor}}
+			\textbf{\PRC@supervisorEN}\textbf{\PRC@esupervisor}\\
+			\ifPRC@academic\relax\else\textbf{\PRC@psupervisorEN\PRC@title@separatorEN\PRC@epsupervisor}\\\fi
+			\textbf{\PRC@majorEN\PRC@title@separatorEN}\mbox{\textbf{\PRC@emajor}}
 		\fi
 			\\ \vspace{\stretch{2}}
-			\zihao{-2}\cqu@edepartment\\\cqu@universitynameEN\\[1mm]
-			\ifdefempty{\cqu@myedate}{\textbf{\edate}}{\textbf{\cqu@myedate}}
+			\zihao{-2}\PRC@edepartment\\\PRC@universitynameEN\\[1mm]
+			\ifdefempty{\PRC@myedate}{\textbf{\edate}}{\textbf{\PRC@myedate}}
 			\vspace{10mm}
 	\end{center}}
 %    \end{macrocode}
@@ -1925,14 +1913,14 @@
 %    \begin{macrocode}
 \def\makecover{%
 	\hypersetup{%
-		pdftitle = {\cqu@ctitle},
-		pdfauthor = {\cqu@cauthor},
-		pdfsubject = {\cqu@thesistypenameCN},
-		pdfkeywords = {\cqu@ckeywords},
+		pdftitle = {\PRC@ctitle},
+		pdfauthor = {\PRC@cauthor},
+		pdfsubject = {\PRC@thesistypenameCN},
+		pdfkeywords = {\PRC@ckeywords},
 		pdfcreator = {CQUThesis--v\version, a LaTeX template.}
 	}
 	\phantomsection
-	\pdfbookmark[-1]{\cqu@ctitle}{ctitle}
+	\pdfbookmark[-1]{\PRC@ctitle}{ctitle}
 	\make@cover@CN
 	\make@cover@EN
 }%makecover
@@ -1943,10 +1931,10 @@
 % \subsubsection{信息收集}
 % 论文的中英文摘要
 %    \begin{macrocode}
-\newcommand{\cqu@@cabstract}[1]{\long\gdef\cqu@cabstract{#1}}
-\newenvironment{cabstract}{\Collect@Body\cqu@@cabstract}{}
-\newcommand{\cqu@@eabstract}[1]{\long\gdef\cqu@eabstract{#1}}
-\newenvironment{eabstract}{\Collect@Body\cqu@@eabstract}{}
+\newcommand{\PRC@@cabstract}[1]{\long\gdef\PRC@cabstract{#1}}
+\newenvironment{cabstract}{\Collect@Body\PRC@@cabstract}{}
+\newcommand{\PRC@@eabstract}[1]{\long\gdef\PRC@eabstract{#1}}
+\newenvironment{eabstract}{\Collect@Body\PRC@@eabstract}{}
 %    \end{macrocode}
 %
 % \subsubsection{生成摘要}
@@ -1956,42 +1944,42 @@
 \def\makeabstract{%
 	\cleardoublepage
 	\normalsize
-	\cqu@makeabstract
+	\PRC@makeabstract
 }%makeabstract
-\newcommand{\cqu@makeabstract}{%
+\newcommand{\PRC@makeabstract}{%
 	\clearpage
-	\chapter[\cqu@cabstract@tocname]{\cqu@cabstract@name}
+	\chapter[\PRC@cabstract@tocname]{\PRC@cabstract@name}
 	\pagestyle{style@normal}
-	\cqu@fixhead
+	\PRC@fixhead
 	\pagenumbering{Roman}
-	\cqu@cabstract
+	\PRC@cabstract
 	\vskip12bp
-	\cqu@put@kw{\heiti\cqu@ckw@title\cqu@title@separatorCN}{\cqu@ckeywords}
-	\if@twosideprint\ifcqu@openany\ifcqu@abstractopenright\cqu@addblankpage\fi\fi\fi
-	\chapter[\cqu@eabstract@tocname]{\sffamily\textbf{\cqu@eabstract@name}}
-	\cqu@fixhead
-	\cqu@eabstract
+	\PRC@put@kw{\heiti\PRC@ckw@title\PRC@title@separatorCN}{\PRC@ckeywords}
+	\if@twosideprint\ifPRC@openany\ifPRC@abstractopenright\PRC@addblankpage\fi\fi\fi
+	\chapter[\PRC@eabstract@tocname]{\sffamily\textbf{\PRC@eabstract@name}}
+	\PRC@fixhead
+	\PRC@eabstract
 	\vskip12bp
-	\cqu@put@kw{\textbf{\cqu@ekw@title\cqu@title@separatorEN}}{\cqu@ekeywords}
+	\PRC@put@kw{\textbf{\PRC@ekw@title\PRC@title@separatorEN}}{\PRC@ekeywords}
 }
 %    \end{macrocode}
 % \end{macro}
 % 排版关键词：
 %    \begin{macrocode}
-\newbox\cqu@kw
-\newcommand{\cqu@put@kw}[2]{%
+\newbox\PRC@kw
+\newcommand{\PRC@put@kw}[2]{%
 	\begingroup
-	\setbox\cqu@kw=\hbox{#1}
-	\noindent\hangindent\wd\cqu@kw\hangafter1
-	\box\cqu@kw#2\par
+	\setbox\PRC@kw=\hbox{#1}
+	\noindent\hangindent\wd\PRC@kw\hangafter1
+	\box\PRC@kw#2\par
 	\endgroup}
 %    \end{macrocode}
 %
 % \subsection{独创声明和授权书}
-% \begin{macro}{\cquauthpage}
+% \begin{macro}{\PRCauthpage}
 % 绘制独创性声明和授权书页面
 %    \begin{macrocode}
-\NewDocumentCommand{\cqu@makeauth}{o}{%
+\NewDocumentCommand{\PRC@makeauth}{o}{%
 	\clearpage
 	\thispagestyle{style@empty}
 	\IfNoValueTF{#1}{%
@@ -1999,131 +1987,131 @@
 		\begin{center}
 			\zihao{3}
 			\begin{CJKfilltwosides}{6\ccwd}
-				\heiti{}\cqu@innotitle
+				\heiti{}\PRC@innotitle
 			\end{CJKfilltwosides}
 		\end{center}
 		\vspace{2mm}
 		\zihao{-4}
-		\par\cqu@innobody
+		\par\PRC@innobody
 		\\[5mm]
-		\par\cqu@innosignature\hfill\cqu@signdate
+		\par\PRC@innosignature\hfill\PRC@signdate
 		\vspace{15mm}
 		\begin{center}
 			\zihao{3}\heiti
-			\cqu@authtitle
+			\PRC@authtitle
 		\end{center}
 		\vspace{2mm}
 		\zihao{-4}
-		\par\cqu@authbody
+		\par\PRC@authbody
 		\\[15mm]
 		\begin{minipage}{\textwidth}
 			\begin{minipage}{15\ccwd}
-				\cqu@authsignaturestu\\[10mm]
-				\cqu@signdate
+				\PRC@authsignaturestu\\[10mm]
+				\PRC@signdate
 			\end{minipage}
 			\hfill
 			\begin{minipage}{15\ccwd}
-				\cqu@authsignaturesup\\[10mm]
-				\cqu@signdate
+				\PRC@authsignaturesup\\[10mm]
+				\PRC@signdate
 			\end{minipage}
 		\end{minipage}
 	}{
 	\includepdf{#1}
 }
-}%\cqu@makeauth
-\let\cquauthpage\cqu@makeauth
+}%\PRC@makeauth
+\let\PRCauthpage\PRC@makeauth
 %</cls>
 %    \end{macrocode}
 % \end{macro}
 % 定义封面用到的文字常量
 %    \begin{macrocode}
 %<*cfg>
-\def\cqu@ckeywords@separator{，}
-\def\cqu@ekeywords@separator{, }
-\def\cqu@title@separatorCN{：}
-\def\cqu@title@separatorEN{:~}
-\def\cqu@cabstract@tocname{中文摘要}
-\def\cqu@eabstract@tocname{英文摘要}
-\def\cqu@cabstract@name{摘\hskip\ccwd{}要}
-\def\cqu@eabstract@name{ABSTRACT}
-\def\cqu@ckw@title{关键词}
-\def\cqu@ekw@title{Key words}
-\def\cqu@workby{by}
-\ifcqu@bachelor
-	\def\cqu@thesistypenameCN{重庆大学本科学生毕业设计（论文）}
-	\def\cqu@thesistypenameEN{Graduation Design(Thesis) of Chongqing University}
-	\def\cqu@studentCN{学生}
-	\def\cqu@studentEN{Undergraduate}
-	\def\cqu@studentnumCN{学号}
-	\def\cqu@supervisorCN{指导教师}
-	\def\cqu@supervisorEN{Supervised by{ }}
-	\def\cqu@assistsupervisorCN{助理指导教师}
-	\def\cqu@extrasupervisorCN{校外指导教师}
-	\def\cqu@assistsupervisorEN{Assistant Supervisor}
-	\def\cqu@majorCN{专业}
-	\def\cqu@majorEN{Major}
-	\def\cqu@universitynameCN{重庆大学}
-	\def\cqu@universitynameEN{Chongqing University}
+\def\PRC@ckeywords@separator{，}
+\def\PRC@ekeywords@separator{, }
+\def\PRC@title@separatorCN{：}
+\def\PRC@title@separatorEN{:~}
+\def\PRC@cabstract@tocname{中文摘要}
+\def\PRC@eabstract@tocname{英文摘要}
+\def\PRC@cabstract@name{摘\hskip\ccwd{}要}
+\def\PRC@eabstract@name{ABSTRACT}
+\def\PRC@ckw@title{关键词}
+\def\PRC@ekw@title{Key words}
+\def\PRC@workby{by}
+\ifPRC@bachelor
+	\def\PRC@thesistypenameCN{重庆大学本科学生毕业设计（论文）}
+	\def\PRC@thesistypenameEN{Graduation Design(Thesis) of Chongqing University}
+	\def\PRC@studentCN{学生}
+	\def\PRC@studentEN{Undergraduate}
+	\def\PRC@studentnumCN{学号}
+	\def\PRC@supervisorCN{指导教师}
+	\def\PRC@supervisorEN{Supervised by{ }}
+	\def\PRC@assistsupervisorCN{助理指导教师}
+	\def\PRC@extrasupervisorCN{校外指导教师}
+	\def\PRC@assistsupervisorEN{Assistant Supervisor}
+	\def\PRC@majorCN{专业}
+	\def\PRC@majorEN{Major}
+	\def\PRC@universitynameCN{重庆大学}
+	\def\PRC@universitynameEN{Chongqing University}
 \else
-	\ifcqu@master
-		\def\cqu@thesistypenameCN{重庆大学硕士学位论文}
-		\def\cqu@thesistypenameEN{A Thesis Submitted to Chongqing University\\%
+	\ifPRC@master
+		\def\PRC@thesistypenameCN{重庆大学硕士学位论文}
+		\def\PRC@thesistypenameEN{A Thesis Submitted to Chongqing University\\%
 			in Partial Fulfillment of the Requirement for%
-		\ifcqu@academic{ }the\fi\\\cqu@edgree}
-		\def\cqu@studentCN{学生姓名}
-		\def\cqu@supervisorCN{指导教师}
-		\def\cqu@supervisorEN{Supervised by{ }}
-		\def\cqu@psupervisorCN{兼职导师}
-		\def\cqu@psupervisorEN{Pluralistic~Supervisor}
-		\def\cqu@majorCN{专业}
-		\def\cqu@majorEN{Specialty}
-		\ifcqu@academic
-			\def\cqu@mastertype{(学术学位)}
-			\def\cqu@majorclassCN{学科门类}
+		\ifPRC@academic{ }the\fi\\\PRC@edgree}
+		\def\PRC@studentCN{学生姓名}
+		\def\PRC@supervisorCN{指导教师}
+		\def\PRC@supervisorEN{Supervised by{ }}
+		\def\PRC@psupervisorCN{兼职导师}
+		\def\PRC@psupervisorEN{Pluralistic~Supervisor}
+		\def\PRC@majorCN{专业}
+		\def\PRC@majorEN{Specialty}
+		\ifPRC@academic
+			\def\PRC@mastertype{(学术学位)}
+			\def\PRC@majorclassCN{学科门类}
 		\else
-			\def\cqu@mastertype{(专业学位)}
-			\def\cqu@majorclassCN{学位类型}
+			\def\PRC@mastertype{(专业学位)}
+			\def\PRC@majorclassCN{学位类型}
 		\fi
-		\def\cqu@universitynameCN{重庆大学}
-		\def\cqu@universitynameEN{Chongqing University, Chongqing, China}
+		\def\PRC@universitynameCN{重庆大学}
+		\def\PRC@universitynameEN{Chongqing University, Chongqing, China}
 	\else
-		\ifcqu@doctor
-			\def\cqu@thesistypenameCN{重庆大学博士学位论文}
-			\def\cqu@thesistypenameEN{A Thesis Submitted to Chongqing University\\%
-				in Partial Fulfillment of the Requirement for the\\\cqu@edgree}
-			\def\cqu@studentCN{学生姓名}
-			\def\cqu@studentEN{Ph.D. Candidate}
-			\def\cqu@supervisorCN{指导教师}
-			\def\cqu@supervisorEN{Supervised by{ }}
-			\def\cqu@majorCN{学科专业}
-			\def\cqu@majorclassCN{学科门类}
-			\def\cqu@majorEN{Specialty}
-			\def\cqu@universitynameCN{重庆大学}
-			\def\cqu@universitynameEN{Chongqing University}
+		\ifPRC@doctor
+			\def\PRC@thesistypenameCN{重庆大学博士学位论文}
+			\def\PRC@thesistypenameEN{A Thesis Submitted to Chongqing University\\%
+				in Partial Fulfillment of the Requirement for the\\\PRC@edgree}
+			\def\PRC@studentCN{学生姓名}
+			\def\PRC@studentEN{Ph.D. Candidate}
+			\def\PRC@supervisorCN{指导教师}
+			\def\PRC@supervisorEN{Supervised by{ }}
+			\def\PRC@majorCN{学科专业}
+			\def\PRC@majorclassCN{学科门类}
+			\def\PRC@majorEN{Specialty}
+			\def\PRC@universitynameCN{重庆大学}
+			\def\PRC@universitynameEN{Chongqing University}
 		\else
-			\ClassWarning{cquthesis}%
+			\ClassWarning{PRCthesis}%
 				{Specified thesis type is obligatory: \MessageBreak
 					type=[bachelor|master|doctor](How did you bypass the type check?)}{}
 		\fi
 	\fi
 \fi
-\def\cqu@innotitle{独创性声明}
-\def\cqu@innobody{%
+\def\PRC@innotitle{独创性声明}
+\def\PRC@innobody{%
 	本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。据我所知，除了文中特别标注和致谢的地方外，论文中不包含其他人已经发表或撰写中的研究成果，也不包含为获得重庆大学或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本文所做的任何贡献均已在论文中做了明确的说明并表示谢意。}
-\def\cqu@innosignature{学位论文作者签名：}
-\def\cqu@authtitle{学位论文版权使用授权书}
-\def\cqu@authcheckpart{%
+\def\PRC@innosignature{学位论文作者签名：}
+\def\PRC@authtitle{学位论文版权使用授权书}
+\def\PRC@authcheckpart{%
 	保\hskip\ccwd{}密(\hskip2\ccwd)，在\rule{3\ccwd}{0.15mm}年解密后适用本授权书。\\
 	不保密(\hskip2\ccwd)。}
-\def\cqu@authbody{
+\def\PRC@authbody{
 	本学位论文作者完全了解重庆大学有关保留、使用学位论文的规定，有权保留并向国家有关部门或机构送交论文的复印件和磁盘，允许论文被查阅和借阅。本人授权重庆大学可以把学位论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文。
 	\\[\baselineskip]
-	\indent\parbox{7\ccwd}{本学位论文属于}\hskip\ccwd\parbox{.6\textwidth}{\cqu@authcheckpart}
+	\indent\parbox{7\ccwd}{本学位论文属于}\hskip\ccwd\parbox{.6\textwidth}{\PRC@authcheckpart}
 	\\[\baselineskip]
 	\indent(请只在上述一个括号内打“\ding{51}”)}
-\def\cqu@authsignaturestu{学位论文作者签名：}
-\def\cqu@authsignaturesup{导师签名：}
-\def\cqu@signdate{签字日期：\hskip3\ccwd{}年\hskip2\ccwd{}月\hskip2\ccwd{}日}
+\def\PRC@authsignaturestu{学位论文作者签名：}
+\def\PRC@authsignaturesup{导师签名：}
+\def\PRC@signdate{签字日期：\hskip3\ccwd{}年\hskip2\ccwd{}月\hskip2\ccwd{}日}
 %</cfg>
 %    \end{macrocode}
 % \subsection{主要符号对照表}
@@ -2131,8 +2119,8 @@
 % 定义主要符号对照表
 %    \begin{macrocode}
 %<*cls>
-\newlist{cqu@denotation}{description}{1}
-\setlist[cqu@denotation]{%
+\newlist{PRC@denotation}{description}{1}
+\setlist[PRC@denotation]{%
 	nosep,
 	font	=	\normalfont,
 	align	=	left,
@@ -2143,11 +2131,11 @@
 	itemindent	=	0mm,
 }%\setlist
 \NewDocumentEnvironment{denotation}{O{20mm} O{30mm}}{%
-	\chapter*{\cqu@denotation@name}
-	\chaptermark{\cqu@denotation@name}\cqu@fixhead
-	\zihao{-4}\begin{cqu@denotation}[labelindent = #1,labelwidth=#2,]
+	\chapter*{\PRC@denotation@name}
+	\chaptermark{\PRC@denotation@name}\PRC@fixhead
+	\zihao{-4}\begin{PRC@denotation}[labelindent = #1,labelwidth=#2,]
 	}{
-\end{cqu@denotation}}%\denotation
+\end{PRC@denotation}}%\denotation
 %    \end{macrocode}
 % \end{environment}
 %
@@ -2161,7 +2149,7 @@
 %    \end{macrocode}
 % 调整subsection的目录缩进
 %    \begin{macrocode}
-\ifcqu@liberalformat
+\ifPRC@liberalformat
 	\cftsetindents{chapter}{0em}{1.5em}
 	\cftsetindents{section}{1.9em}{0.9em}
 	\cftsetindents{subsection}{4.0em}{1.5em}
@@ -2173,7 +2161,7 @@
 %    \end{macrocode}
 % 目录中的不同级别采用不同的字号和字体，这是按照学校word样例的实现，但是蹊跷的是，样例里的这些做法在官方文件里却没有体现，所以这里列为可选项，适用于三级标题很多的情况：
 %    \begin{macrocode}
-\ifcqu@seriftoc
+\ifPRC@seriftoc
 	\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 	\renewcommand{\cftchapfont}{\zihao{4}\sffamily\heiti}
 	\renewcommand{\cftsecfont}{\zihao{5}\sffamily\heiti}
@@ -2214,7 +2202,7 @@
 %
 % 决定论文页眉名称 这个变量不能含有格式
 %    \begin{macrocode}
-%<cfg>\let\cqu@thesisname\cqu@thesistypenameCN
+%<cfg>\let\PRC@thesisname\PRC@thesistypenameCN
 %    \end{macrocode}
 %
 % 目录和索引标题居中，包含\cs{fixhead}
@@ -2223,11 +2211,11 @@
 %    \begin{macrocode}
 %<*cls>
 \renewcommand{\cfttoctitlefont}{%
-	\phantomsection\pdfbookmark[0]{\cqu@tocnameinbkmark}{toc}\cqu@fixhead\hfill\bfseries\sffamily\heiti\zihao{3}}
-\renewcommand{\cftloftitlefont}{\cqu@fixhead\hfill\sffamily\heiti\zihao{3}}
-\renewcommand{\cftlottitlefont}{\cqu@fixhead\hfill\sffamily\heiti\zihao{3}}
-\renewcommand{\cftequtitlefont}{\cqu@fixhead\hfill\sffamily\heiti\zihao{3}}
-\renewcommand{\cftequENtitlefont}{\cqu@fixhead\hfill\sffamily\heiti\zihao{3}}
+	\phantomsection\pdfbookmark[0]{\PRC@tocnameinbkmark}{toc}\PRC@fixhead\hfill\bfseries\sffamily\heiti\zihao{3}}
+\renewcommand{\cftloftitlefont}{\PRC@fixhead\hfill\sffamily\heiti\zihao{3}}
+\renewcommand{\cftlottitlefont}{\PRC@fixhead\hfill\sffamily\heiti\zihao{3}}
+\renewcommand{\cftequtitlefont}{\PRC@fixhead\hfill\sffamily\heiti\zihao{3}}
+\renewcommand{\cftequENtitlefont}{\PRC@fixhead\hfill\sffamily\heiti\zihao{3}}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftafterloftitle}{\hfill}
 \renewcommand{\cftafterlottitle}{\hfill}
@@ -2237,7 +2225,7 @@
 %
 % 重写使用tocloft宏包情况下的目录和索引生成，每次生成新开一页
 %    \begin{macrocode}
-\ifcqu@continuoustoc\relax\else
+\ifPRC@continuoustoc\relax\else
 	\renewcommand{\@cfttocstart}{\clearpage}
 	\renewcommand{\@cfttocfinish}{\clearpage}
 \fi
@@ -2274,7 +2262,7 @@
 % 将参考文献加入目录和pdf书签中
 %    \begin{macrocode}
 \pretocmd{\bibliography}{%
-	\clearpage\phantomsection\addcontentsline{toc}{chapter}{\cqu@bib@name}}{}{}
+	\clearpage\phantomsection\addcontentsline{toc}{chapter}{\PRC@bib@name}}{}{}
 %    \end{macrocode}
 %
 % 参考文献使用五号字，同时优化参考文献占用的空间
@@ -2285,8 +2273,8 @@
 }%AtBeginDocument
 \renewcommand\@biblabel[1]{\zihao{5}[#1]}
 \renewenvironment{thebibliography}[1]
-{\chapter*{\cqu@bib@name
-		\@mkboth{\cqu@bib@name}{}}%
+{\chapter*{\PRC@bib@name
+		\@mkboth{\PRC@bib@name}{}}%
 	\list{\@biblabel{\@arabic\c@enumiv}}%
 	{\settowidth\labelwidth{\@biblabel{#1}}%
 		\leftmargin\labelwidth
@@ -2315,7 +2303,7 @@
 %\subsection{载入配置文件}
 % 配置文件用于降低主文件的压力：
 %    \begin{macrocode}
-\AtEndOfClass{\input{cquthesis.cfg}}
+\AtEndOfClass{\input{PRCthesis.cfg}}
 %</cls>
 %    \end{macrocode}
 %
@@ -2344,22 +2332,22 @@ headsep=3mm]{geometry}
 \RequirePackage{pifont}
 
 \def\footnoterule{\vskip-3\p@\hrule\@width0.3\textwidth\@height0.4\p@\vskip2.6\p@}
-\let\cqu@footnotesize\footnotesize
-\renewcommand{\footnotesize}{\cqu@footnotesize\zihao{-5}}
+\let\PRC@footnotesize\footnotesize
+\renewcommand{\footnotesize}{\PRC@footnotesize\zihao{-5}}
 \footnotemargin1.5em\relax
 
-\let\cqu@makefnmark\@makefnmark
-\def\cqu@@makefnmark{\mbox{{\normalfont\@thefnmark}}}
-\pretocmd{\@makefntext}{\let\@makefnmark\cqu@@makefnmark}{}{}
-\apptocmd{\@makefntext}{\let\@makefnmark\cqu@makefnmark}{}{}
+\let\PRC@makefnmark\@makefnmark
+\def\PRC@@makefnmark{\mbox{{\normalfont\@thefnmark}}}
+\pretocmd{\@makefntext}{\let\@makefnmark\PRC@@makefnmark}{}{}
+\apptocmd{\@makefntext}{\let\@makefnmark\PRC@makefnmark}{}{}
 
-\colorlet{cqu@macro}{blue!60!black}
-\colorlet{cqu@env}{blue!70!black}
-\colorlet{cqu@option}{purple}
-\patchcmd{\PrintMacroName}{\MacroFont}{\MacroFont\bfseries\color{cqu@macro}}{}{}
-\patchcmd{\PrintDescribeMacro}{\MacroFont}{\MacroFont\bfseries\color{cqu@macro}}{}{}
-\patchcmd{\PrintDescribeEnv}{\MacroFont}{\MacroFont\bfseries\color{cqu@env}}{}{}
-\patchcmd{\PrintEnvName}{\MacroFont}{\MacroFont\bfseries\color{cqu@env}}{}{}
+\colorlet{PRC@macro}{blue!60!black}
+\colorlet{PRC@env}{blue!70!black}
+\colorlet{PRC@option}{purple}
+\patchcmd{\PrintMacroName}{\MacroFont}{\MacroFont\bfseries\color{PRC@macro}}{}{}
+\patchcmd{\PrintDescribeMacro}{\MacroFont}{\MacroFont\bfseries\color{PRC@macro}}{}{}
+\patchcmd{\PrintDescribeEnv}{\MacroFont}{\MacroFont\bfseries\color{PRC@env}}{}{}
+\patchcmd{\PrintEnvName}{\MacroFont}{\MacroFont\bfseries\color{PRC@env}}{}{}
 
 \appto{\TeX}{\xspace}
 \appto{\LaTeX}{\xspace}
@@ -2370,9 +2358,9 @@ headsep=3mm]{geometry}
 	\Describe@Option}
 \def\Describe@Option#1{\endgroup
 	\marginpar{\raggedleft\PrintDescribeOption{#1}}%
-	\cqu@special@index{option}{#1}\@esphack\ignorespaces}
-\def\PrintDescribeOption#1{\strut \MacroFont\bfseries\sffamily\color{cqu@option} #1\ }
-\def\cqu@special@index#1#2{\@bsphack
+	\PRC@special@index{option}{#1}\@esphack\ignorespaces}
+\def\PrintDescribeOption#1{\strut \MacroFont\bfseries\sffamily\color{PRC@option} #1\ }
+\def\PRC@special@index#1#2{\@bsphack
 	\begingroup
 	\HD@target
 	\let\HDorg@encapchar\encapchar
@@ -2439,15 +2427,15 @@ headsep=3mm]{geometry}
 \DeclareDocumentCommand{\option}{m}{\textsf{#1}\xspace}
 \DeclareDocumentCommand{\env}{m}{\texttt{#1}\xspace}
 \DeclareDocumentCommand{\pkg}{s m}{%
-	\texttt{#2}\xspace\IfBooleanF#1{\cqu@special@index{package}{#2}}}
+	\texttt{#2}\xspace\IfBooleanF#1{\PRC@special@index{package}{#2}}}
 \DeclareDocumentCommand{\file}{s m}{%
-	\texttt{#2}\xspace\IfBooleanF#1{\cqu@special@index{file}{#2}}}
+	\texttt{#2}\xspace\IfBooleanF#1{\PRC@special@index{file}{#2}}}
 \newcommand{\myentry}[1]{%
 	\marginpar{\raggedleft\color{purple}\bfseries\strut #1}}
 \newcommand{\note}[1]{{%
 		\color{magenta}{\noindent\bfseries 说明：}\emph{#1}}}
 
-\def\cquthesis{\textsc{Cqu}\-\textsc{Thesis}}
+\def\PRCthesis{\textsc{Cqu}\-\textsc{Thesis}}
 %</dtx-style>
 %    \end{macrocode}
 % \fi

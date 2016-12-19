@@ -1,12 +1,12 @@
 \chapter{绪论}
 \section{欢迎！}
-欢迎来到\cquthesis{}示例文档！
+欢迎来到\PRCthesis{}示例文档！
 
-本文档使用\cquthesis{}本身作为模板，即\pkg{cquthesis.cls}, \pkg{cquthesis.sty}和\pkg{cquthesis.cfg}，旨在展现\cquthesis{}的使用方法。请结合\cquthesis{}用户手册和本文档源代码进行学习和操作。
+本文档使用\PRCthesis{}本身作为模板，即\pkg{PRCthesis.cls}, \pkg{PRCthesis.sty}和\pkg{PRCthesis.cfg}，旨在展现\PRCthesis{}的使用方法。请结合\PRCthesis{}用户手册和本文档源代码进行学习和操作。
 
 祝毕设成功，答辩拿优！Happy Texing!
 
-本文档编译时使用的\cquthesis{}版本为\version{}。
+本文档编译时使用的\PRCthesis{}版本为\version{}。
 
 请留意到本链接检查更新：\url{https://github.com/nanmu42/CQUThesis}
 
@@ -33,17 +33,17 @@
 在你使用\LaTeX{}写作的时候，大部分时间你只需要关心内容本身，而\LaTeX{}就像你的编辑，按照样式要求（模板和宏包）为你排版。
 
 
-\section{\cquthesis{}背后的思路}
+\section{\PRCthesis{}背后的思路}
 
-\cquthesis{}秉承\LaTeX{}的思路，旨在为你解决论文内容以外的大部分问题。
+\PRCthesis{}秉承\LaTeX{}的思路，旨在为你解决论文内容以外的大部分问题。
 
-出于性能和管理方面的考虑，\cquthesis{}使用分布式的源文件方案，将论文的各个部分（通常以章为单位）分散到tex文件中，然后在主文档\pkg{main.tex}中统一处理。\figref{fig:filetree}展示了一个可能的文件目录情况。
+出于性能和管理方面的考虑，\PRCthesis{}使用分布式的源文件方案，将论文的各个部分（通常以章为单位）分散到tex文件中，然后在主文档\pkg{main.tex}中统一处理。\figref{fig:filetree}展示了一个可能的文件目录情况。
 \begin{figure}[htb]
 	\dirtree{%
 		.1 \myfolder{pink}{工作文件夹}.
-		.2 \myfolder{cyan}{\pkg{cquthesis.cls}}.
-		.2 \myfolder{cyan}{\pkg{cquthesis.cfg}}.
-		.2 \myfolder{cyan}{\pkg{cquthesis.sty}}.
+		.2 \myfolder{cyan}{\pkg{PRCthesis.cls}}.
+		.2 \myfolder{cyan}{\pkg{PRCthesis.cfg}}.
+		.2 \myfolder{cyan}{\pkg{PRCthesis.sty}}.
 		.2 \myfolder{cyan}{main.tex}.
 		.2 \myfolder{cyan}{contents}.
 		.3 \myfolder{lime}{introduction.tex}.
@@ -56,7 +56,7 @@
 		.2 \myfolder{cyan}{ref}.
 		.3 \myfolder{lime}{refs.bib}.
 	}%\dirtree
-\caption[\cquthesis{}文件结构图示]{\cquthesis{}文件结构图示，出于测试的原因，这个标题被故意填充得很长，这里，你可以结合本文文档代码看到插图索引中是如何处理这个问题的。}
+\caption[\PRCthesis{}文件结构图示]{\PRCthesis{}文件结构图示，出于测试的原因，这个标题被故意填充得很长，这里，你可以结合本文文档代码看到插图索引中是如何处理这个问题的。}
 \label{fig:filetree}
 \end{figure}
 

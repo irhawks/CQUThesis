@@ -58,10 +58,10 @@
 \end{problem}#n
 \ccwd#n
 \colsep{length}#t
-\cquthesis#n
-\cquauthpage#n
-\cquauthpage[scanedFile]#n
-\cqusetup{key=value,}#n
+\prcthesis#n
+\prcauthpage#n
+\prcauthpage[scanedFile]#n
+\prcsetup{key=value,}#n
 \ckeywords#S
 \ctexset{key=value,}#n
 \ding{number}#n

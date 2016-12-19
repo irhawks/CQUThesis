@@ -1,5 +1,5 @@
-# Makefile for CQUThesis
-# Adapted from Thuthesis Makefile
+# Makefile for PRCThesis
+# Adapted from CQUthesis Makefile and Thuthesis Makefile
 
 # Compiling method: latexmk/xelatex/pdflatex
 METHOD = latexmk
@@ -9,7 +9,7 @@ LATEXMKOPTS = -xelatex
 THESISMAIN = main
 
 
-PACKAGE=cquthesis
+PACKAGE=PRCthesis
 SOURCES=$(PACKAGE).ins $(PACKAGE).dtx
 THESISCONTENTS=$(THESISMAIN).tex contents/*.tex $(FIGURES)
 # NOTE: update this to reflect your local file types.

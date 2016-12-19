@@ -79,8 +79,8 @@ if %flag%x == buildxx (
 goto:EOF
 
 :checkfiles
-  IF NOT EXIST cquthesis.cls call:extract
-  IF NOT EXIST cquthesis.cfg call:extract
+  IF NOT EXIST PRCthesis.cls call:extract
+  IF NOT EXIST PRCthesis.cfg call:extract
 goto:EOF
 
 :thesis
@@ -120,17 +120,17 @@ goto:EOF
 
 :extract
   echo extracting...
-  latex cquthesis.ins
-  echo *******CQUThesis has been extracted.********
+  latex PRCthesis.ins
+  echo *******PRCThesis has been extracted.********
 goto:EOF
 
 :document
   echo building documents...
   set cmode=-interaction=batchmode
-  xelatex cquthesis.dtx
-  makeindex -s gind.ist -o cquthesis.ind cquthesis.idx
-  makeindex -s gglo.ist -o cquthesis.gls cquthesis.glo
-  xelatex cquthesis.dtx
-  xelatex cquthesis.dtx
-  xelatex cquthesis.dtx
+  xelatex PRCthesis.dtx
+  makeindex -s gind.ist -o PRCthesis.ind PRCthesis.idx
+  makeindex -s gglo.ist -o PRCthesis.gls PRCthesis.glo
+  xelatex PRCthesis.dtx
+  xelatex PRCthesis.dtx
+  xelatex PRCthesis.dtx
 goto:EOF

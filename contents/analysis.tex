@@ -34,10 +34,10 @@ The \textbf{words} in this sentences are \textit{processed} with three different
 		\toprule
 		{\heiti 文件名} & {\heiti 描述} \\
 		\midrule
-		cquthesis.cls & 模板类文件\footnote{这是一个脚注}\\
-		cquthesis.cfg & 模板配置文件\footnote{这是又一个脚注}\\
-		cqunumberical.bst & 参考文献 BIB\TeX\ 样式文件。\\
-		cquthesis.sty & 常用的包和命令写在这里，减轻主文件的负担。\footnote{同一页上的脚注最多支持到10个}\\
+		PRCthesis.cls & 模板类文件\footnote{这是一个脚注}\\
+		PRCthesis.cfg & 模板配置文件\footnote{这是又一个脚注}\\
+		PRCnumberical.bst & 参考文献 BIB\TeX\ 样式文件。\\
+		PRCthesis.sty & 常用的包和命令写在这里，减轻主文件的负担。\footnote{同一页上的脚注最多支持到10个}\\
 		\bottomrule
 		\end{tabularx}
 	\end{minipage}
@@ -216,7 +216,7 @@ The \textbf{words} in this sentences are \textit{processed} with three different
 \end{assumption}
 
 \begin{definition}
-	我们定义\ref{eq:eqnxmp}中的方程名称为\cquthesis 。你看，环境里是可以相互引用的。
+	我们定义\ref{eq:eqnxmp}中的方程名称为\PRCthesis 。你看，环境里是可以相互引用的。
 \end{definition}
 
 \begin{proposition}
@@ -354,7 +354,7 @@ The \textbf{words} in this sentences are \textit{processed} with three different
 
 研究表明\cite{r1}，早睡早起有益身体健康。如果想同时引用多个文献\cite{r2,r3,r4,r6}，只需要在\csgo{cite}{\null}中用逗号分开\textsf{citeKey}就好。
 
-\cquthesis 同时提供正文模式的参考文献引用功能\cs{inlinecite}，适用于以下情况：
+\PRCthesis 同时提供正文模式的参考文献引用功能\cs{inlinecite}，适用于以下情况：
 
 文献\inlinecite{r6}表明，文献\inlinecite{r7,r8,r9}所述的情况是有理论依据的。
 
@@ -424,7 +424,7 @@ p(y|\mathbf{x}) = \frac{p(\mathbf{x},y)}{p(\mathbf{x})}=
 
 \section{国际单位制(SI Unit)}
 
-\cquthesis 采用\pkg{siunitx}作为国际单位制支持宏包，以下是一些使用例子，这个包的文档写得非常不错，请在命令行里输入\texttt{texdoc siunitx}察看。
+\PRCthesis 采用\pkg{siunitx}作为国际单位制支持宏包，以下是一些使用例子，这个包的文档写得非常不错，请在命令行里输入\texttt{texdoc siunitx}察看。
 \begin{center}
 	\num{.3e45}\\
 	\num{1.654 x 2.34 x 3.430}\\
