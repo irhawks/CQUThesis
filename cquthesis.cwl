@@ -1,5 +1,5 @@
 #Written by Zhennan Li 2016/06/10
-#include:amsmath
+#include:mathtools
 #include:array
 #include:booktabs
 #include:tabularx

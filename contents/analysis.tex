@@ -368,7 +368,7 @@ p(y|\mathbf{x}) = \frac{p(\mathbf{x},y)}{p(\mathbf{x})}=
 \frac{p(\mathbf{x}|y)p(y)}{p(\mathbf{x})} 
 \end{equation}
 
-论文里面公式越多，\TeX{} 就越 happy。再看一个 \pkg{amsmath} 的例子：
+论文里面公式越多，\TeX{} 就越 happy。再看一个 \pkg{mathtools} 的例子：
 \newcommand{\envert}[1]{\left\lvert#1\right\rvert} 
 \begin{equation}\label{detK2}
 \det\mathbf{K}(t=1,t_1,\dots,t_n)=\sum_{I\in\mathbf{n}}(-1)^{\envert{I}}
@@ -376,7 +376,7 @@ p(y|\mathbf{x}) = \frac{p(\mathbf{x},y)}{p(\mathbf{x})}=
 ^{(\lambda)}(\overline{I}|\overline{I})=0.
 \end{equation} 
 
-前面定理示例部分列举了很多公式环境，可以说把常见的情况都覆盖了，大家在写公式的时候一定要好好看 \pkg{amsmath} 的文档，并参考模板中的用法：
+前面定理示例部分列举了很多公式环境，可以说把常见的情况都覆盖了，大家在写公式的时候一定要好好看 \pkg{mathtools} 的文档，并参考模板中的用法：
 \begin{multline*}%\tag{[b]} % 这个出现在索引中的
 \int_a^b\biggl\{\int_a^b[f(x)^2g(y)^2+f(y)^2g(x)^2]
 -2f(x)g(x)f(y)g(y)\,dx\biggr\}\,dy \\
