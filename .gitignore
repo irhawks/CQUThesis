@@ -35,8 +35,10 @@ hainuthesis.Rproj
 *.gz
 *.equ
 dtx-style.sty
-hainuthesis.cls
-hainuthesis.cfg
+
+*.cls
+*.cfg
+
 main.pdf
 
 *.swp
